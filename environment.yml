@@ -1,0 +1,25 @@
+name: mitograph
+channels:
+  - pytorch
+  - pyg
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pandas
+  - numpy
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - networkx
+  - biopython
+  - tqdm
+  - pyyaml
+  - umap-learn
+  - pip
+  - pip:
+    - torch
+    - torch-geometric
+    - torch-scatter
+    - torch-sparse
