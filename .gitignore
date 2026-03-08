@@ -1,14 +1,14 @@
 # Raw data files (too large for git)
-data/*.csv
 data/*.sql
-data/*.fasta
-data/*.gff3
-data/*.txt
 data/*.dump
 
-# Intermediate outputs
-data/intermediate/
-data/results/
+# Large binary intermediates
+data/intermediate/*.pkl
+data/intermediate/*.graphml
+data/intermediate/*.pt
+
+# Frontend app (separate repo)
+frontend/
 
 # Python
 __pycache__/
@@ -31,7 +31,5 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Model checkpoints
-*.pt
-*.pth
-*.ckpt
+# Node
+node_modules/

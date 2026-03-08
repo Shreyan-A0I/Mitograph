@@ -1,0 +1,88 @@
+id,name,common_name,starting,ending,strand,type,product,protein_id
+1,MT-TF,F,577,647,H,t,tRNA phenylalanine,
+2,MT-RNR1,12S,648,1601,H,r,12S ribosomal RNA,
+3,MT-TV,V,1602,1670,H,t,tRNA valine,
+4,MT-RNR2,16S,1671,3229,H,r,16S ribosomal RNA,
+5,MT-TL1,L(UUA/G),3230,3304,H,t,tRNA leucine 1,
+6,MT-ND1,ND1,3307,4262,H,m,NADH Dehydrogenase subunit 1,YP_003024026.1
+7,MT-TI,I,4263,4331,H,t,tRNA isoleucine,
+8,MT-TQ,Q,4329,4400,L,t,tRNA glutamine [on complement],
+9,MT-TM,M,4402,4469,H,t,tRNA methionine,
+10,MT-ND2,ND2,4470,5511,H,m,NADH dehydrogenase subunit 2,YP_003024027.1
+11,MT-TW,W,5512,5579,H,t,tRNA tryptophan,
+12,MT-TA,A,5587,5655,L,t,tRNA alanine [on complement],
+13,MT-TN,N,5657,5729,L,t,tRNA asparagine [on complement],
+14,MT-TC,C,5761,5826,L,t,tRNA cysteine [on complement],
+15,MT-TY,Y,5826,5891,L,t,tRNA tyrosine [on complement],
+16,MT-CO1,COI,5904,7445,H,m,Cytochrome c oxidase subunit I,YP_003024028.1
+17,MT-TS1,S(UCN),7446,7514,L,t,tRNA serine 1 [on complement],
+18,MT-TD,D,7518,7585,H,t,tRNA aspartic acid,
+19,MT-CO2,COII,7586,8269,H,m,Cytochrome c oxidase subunit II,YP_003024029.1
+20,MT-TK,K,8295,8364,H,t,tRNA lysine,
+21,MT-ATP8,ATPase8,8366,8572,H,m,ATP synthase F0 subunit 8,YP_003024030.1
+22,MT-ATP6,ATPase6,8527,9207,H,m,ATP synthase F0 subunit 6,YP_003024031.1
+23,MT-CO3,COIII,9207,9990,H,m,Cytochrome c oxidase subunit III,YP_003024032.1
+24,MT-TG,G,9991,10058,H,t,tRNA glycine,
+25,MT-ND3,ND3,10059,10404,H,m,NADH dehydrogenase subunit 3,YP_003024033.1
+26,MT-TR,R,10405,10469,H,t,tRNA arginine,
+27,MT-ND4L,ND4L,10470,10766,H,m,NADH dehydrogenase subunit 4L,YP_003024034.1
+28,MT-ND4,ND4,10760,12137,H,m,NADH dehydrogenase subunit 4,YP_003024035.1
+29,MT-TH,H,12138,12206,H,t,tRNA histidine,
+30,MT-TS2,S(AGY),12207,12265,H,t,tRNA serine2,
+31,MT-TL2,L(CUN),12266,12336,H,t,tRNA leucine2,
+32,MT-ND5,ND5,12337,14148,H,m,NADH dehydrogenase subunit 5,YP_003024036.1
+33,MT-ND6,ND6,14149,14673,L,m,NADH dehydrogenase subunit 6 [on complement],YP_003024037.1
+34,MT-TE,E,14674,14742,L,t,tRNA glutamic acid [on complement],
+35,MT-CYB,Cytb,14747,15887,H,m,Cytochrome b,YP_003024038.1
+36,MT-TT,T,15888,15953,H,t,tRNA threonine,
+37,MT-TP,P,15956,16023,L,t,tRNA proline [on complement],
+38,MT-HV2,CR:HVS2,57,372,N,n,Hypervariable segment 2 [classic:73-340 ],
+39,MT-OHR,CR:OH,110,441,H,n,H-strand origins,
+40,MT-CSB1,CR:CSB1,213,235,N,n,Conserved sequence block 1,
+41,MT-TFX,CR:TFX,233,260,N,n,mtTF1 binding site,
+42,MT-TFY,CR:TFY,276,303,N,n,mtTF1 binding site,
+43,MT-CSB2,CR:CSB2,299,315,N,n,Conserved sequence block 2,
+44,MT-HPR,CR:HPR,317,321,N,n,replication primer,
+45,MT-CSB3,CR:CSB3,346,363,N,n,Conserved sequence block 3,
+46,MT-4H,CR:mt4H,371,379,H,n,mt4 H-strand control element,
+47,MT-3H,CR:mt3H,384,391,H,n,mt3 H-strand control element,
+48,MT-LSP,CR:PL,392,435,L,n,L-strand promoter [on complement],
+49,MT-TFL,CR:mtTF1,418,445,N,n,mtTF1 binding site,
+50,MT-TFH,CR:TFH,523,550,N,n,mtTF1 binding site,
+51,MT-HSP1,CR:PH1,545,567,H,n,Major H-strand promoter,
+52,MT-HSP2,PH2,645,645,H,n,Minor H-strand promoter,
+53,MT-RNR3,-,3206,3229,N,n,5S-like sequence,
+54,MT-TER,-,3229,3256,N,n,Transcription terminator,
+55,MT-NC1,NC1,3305,3306,N,n,non-coding nucleotides,
+56,MT-NC2,NC2,4401,4401,N,n,non-coding nucleotides,
+57,MT-NC3,NC3,5580,5586,N,n,non-coding nucleotides,
+58,MT-NC4,NC4,5656,5656,N,n,non-coding nucleotides,
+59,MT-OLR,OL,5721,5798,L,n,L-strand origin [on complement],
+60,MT-NC5,NC5,5892,5903,N,n,non-coding nucleotides,
+61,MT-NC6,NC6,7515,7517,N,n,non-coding nucleotides,
+62,MT-NC7,NC7,8270,8294,N,n,non-coding nucleotides,
+63,MT-NC8,NC8,8365,8365,N,n,non-coding nucleotide,
+64,MT-NC9,NC9,14743,14746,N,n,non-coding nucleotides,
+65,MT-ATT,ATT,15925,499,N,n,membrane attachment site,
+66,MT-NC10,NC10,15954,15955,N,n,non-coding nucleotides,
+67,MT-CR,CR:Control Region,16024,576,N,n,entire Control Region (including displacement loop),
+68,MT-HV1,CR:HVS1/HV1,16024,16383,N,n,Hypervariable segment 1 [classic:16024-16365],
+69,MT-7SDNA,CR:7S-like,16106,191,N,n,7S DNA,
+70,MT-TAS,CR:TAS,16157,16172,N,n,termination-associated sequence,
+71,MT-5,CR:mt5,16194,16208,N,n,control element,"add 16,197 (Ori-b)"
+72,MT-3L,CR:mt3L,16499,16506,L,n,L-strand control element [on complement],
+73,MT-HV3,CR:HVS3,438,574,N,n,Hypervariable segment 3,
+74,MT-TAS2,CR:TAS2,16081,16138,N,n,extended termination-associated sequence,
+75,MT-OHR57,CR:OH57,57,57,H,n,H-strand origin,
+76,MT-HN,Humanin,2633,2707,H,r,Humanin peptide (MAPRGFSCLLLLTSEIDLPVKRRA) [MDP],
+77,MT-MOTSc,MOTS-C,1343,1393,H,r,MOTS-C peptide (MRWQEMGYIFYPRKLR) [MDP],KP715230.1
+78,MT-SHLP1,SHLP1,2485,2559,L,r,Small HN-like peptide 1 (MCHWAGGASNTGDARGDVFGKQAG) [MDP on complement],KX067779.1
+79,MT-SHLP2,SHLP2,2088,2168,L,r,Small HN-like peptide 2 (MGVKFFTLSTRFFPSVQRAVPLWTNS) [MDP on complement],KX067780.1
+80,MT-SHLP3,SHLP3,1703,1819,L,r,Small HN-like peptide 3 (MLGYNFSSFPCGTISIAPGFNFYRLYFIWVNGLAKVVW)  [MDP on complement],KX067781.1
+81,MT-SHLP4,SHLP4,2442,2522,L,r,Small HN-like peptide 4 (MLEVMFLVNRRGKICRVPFTFFNLSL) [MDP on complement],KX067782.1
+82,MT-SHLP5,SHLP5,2780,2854,L,r,Small HN-like peptide 5 (MYCSEVGFCSEVAPTEIFNAGLVV) [MDP on complement],KX067783.1
+83,MT-SHLP6,SHLP6,2990,3052,H,r,Small HN-like peptide 6 (MLDQDIPMVQPLLKVRLFND)  [MDP],KX067784.1
+84,MT-ALTND4,ALTND4,11557,11856,H,r,Microprotein (99AA) within MT-ND4 [MDP],
+85,MT-SHMOOSE,SHMOOSE,12234,12410,H,r,"Microprotein (58AA) overlapping MT-TS2, MT-TL1, MT-ND5  [MDP]",
+86,MT-CYTB-187AA,CYTB-187AA,14747,15887,H,r,Protein (187AA) in alternate reading frame of MT-CYB [MDP],
+87,MT-GAU,Gau,6287,6589,L,,Microprotein (100AA) within MT-CO1 [MDP on complement],

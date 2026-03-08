@@ -259,6 +259,71 @@ def main():
         json.dump(summary, f, indent=2)
     print(f"Saved summary to {summary_path}")
 
+    # --- Export static data for Next.js frontend ---
+    print("\nExporting static data for Next.js frontend...")
+    export_dir = os.path.join(project_dir, 'frontend', 'public', 'data')
+    os.makedirs(export_dir, exist_ok=True)
+
+    # 1. Export UMAP/Clustering scatter data
+    graph_data = []
+    for i in range(len(all_indices)):
+        if i < n_path:
+            category = "Pathogenic"
+        elif i < n_path + n_benign:
+            category = "Benign"
+        else:
+            category = "VUS"
+
+        is_flagged = bool(
+            cluster_labels[i] in path_clusters and cluster_labels[i] != -1
+        )
+
+        graph_data.append({
+            "id": idx_to_var.get(str(all_indices[i]), f"var_{i}"),
+            "x": round(float(coords[i, 0]), 4),
+            "y": round(float(coords[i, 1]), 4),
+            "category": category,
+            "is_flagged": is_flagged,
+            "cluster": int(cluster_labels[i]),
+        })
+
+    with open(os.path.join(export_dir, "umap_scatter.json"), "w") as f:
+        json.dump(graph_data, f)
+    print(f"  umap_scatter.json: {len(graph_data)} points")
+
+    # 2. Export VUS predictions table
+    pred_df.to_json(
+        os.path.join(export_dir, "vus_predictions.json"), orient="records"
+    )
+    print(f"  vus_predictions.json: {len(pred_df)} rows")
+
+    # 3. Export dashboard summary stats
+    dashboard_stats = {
+        'total_variants': int(n_variants),
+        'n_pathogenic': n_path,
+        'n_benign': n_benign,
+        'n_vus': n_vus,
+        'n_other': len(other_indices),
+        'n_phenotypes': int(n_phenotypes),
+        'vus_in_pathogenic_clusters': len(vus_in_path_clusters),
+        'silhouette_score': round(float(sil_score), 4) if not math.isnan(sil_score) else None,
+        'test_auprc': None,  # filled from training_metrics if available
+        'test_auroc': None,
+    }
+    # Try to load training metrics
+    train_metrics_path = os.path.join(results_dir, 'training_metrics.json')
+    if os.path.exists(train_metrics_path):
+        with open(train_metrics_path, 'r') as f:
+            train_metrics = json.load(f)
+        dashboard_stats['test_auprc'] = train_metrics.get('test_auprc')
+        dashboard_stats['test_auroc'] = train_metrics.get('test_auroc')
+
+    with open(os.path.join(export_dir, "dashboard_stats.json"), "w") as f:
+        json.dump(dashboard_stats, f, indent=2)
+    print(f"  dashboard_stats.json exported")
+
+    print(f"Exported all JSON files to {export_dir}")
+
 
 if __name__ == '__main__':
     main()

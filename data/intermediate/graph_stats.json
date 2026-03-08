@@ -1,0 +1,17 @@
+{
+  "total_nodes": 4288,
+  "total_edges": 4062,
+  "node_types": {
+    "Gene": 37,
+    "Complex": 4,
+    "Variant": 3439,
+    "Phenotype": 808
+  },
+  "edge_types": {
+    "LOCATED_IN": 3429,
+    "PART_OF": 13,
+    "ASSOCIATED_WITH": 620
+  },
+  "is_connected": false,
+  "n_connected_components": 631
+}

@@ -1,0 +1,92 @@
+{
+  "total_nodes": 4288,
+  "total_edges": 11499,
+  "node_types": {
+    "Gene": 37,
+    "Complex": 4,
+    "Variant": 3439,
+    "Phenotype": 808
+  },
+  "edge_types": {
+    "LOCATED_IN": 3429,
+    "PART_OF": 13,
+    "ASSOCIATED_WITH": 620,
+    "KMER_SIMILARITY": 7437
+  },
+  "clinical_significance_distribution": {
+    "Pathogenic": 32,
+    "MITOMAP_only": 434,
+    "Other": 37,
+    "Benign": 892,
+    "VUS": 1228,
+    "Conflicting": 13,
+    "Likely pathogenic": 84,
+    "Likely benign": 719
+  },
+  "degree_stats_by_node_type": {
+    "Gene": {
+      "min": 22,
+      "max": 353,
+      "mean": 93.02702702702703
+    },
+    "Complex": {
+      "min": 1,
+      "max": 7,
+      "mean": 3.25
+    },
+    "Variant": {
+      "min": 0,
+      "max": 25,
+      "mean": 5.5024716487350975
+    },
+    "Phenotype": {
+      "min": 0,
+      "max": 117,
+      "mean": 0.7673267326732673
+    }
+  },
+  "connected_components": 609,
+  "largest_component_size": 3621,
+  "top_10_phenotypes_by_degree": [
+    {
+      "name": "Mitochondrial disease",
+      "degree": 117
+    },
+    {
+      "name": "MELAS syndrome",
+      "degree": 54
+    },
+    {
+      "name": "Primary mitochondrial disorders",
+      "degree": 45
+    },
+    {
+      "name": "Leigh syndrome",
+      "degree": 34
+    },
+    {
+      "name": "Leber optic atrophy",
+      "degree": 33
+    },
+    {
+      "name": "LHON",
+      "degree": 12
+    },
+    {
+      "name": "Mitochondrial complex IV deficiency, nuclear type 1",
+      "degree": 11
+    },
+    {
+      "name": "Leber optic atrophy and dystonia",
+      "degree": 8
+    },
+    {
+      "name": "MERRF syndrome",
+      "degree": 7
+    },
+    {
+      "name": "Mitochondrial non-syndromic sensorineural hearing loss",
+      "degree": 6
+    }
+  ]
+}
