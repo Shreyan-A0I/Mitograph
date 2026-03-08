@@ -57,7 +57,7 @@ def parse_gff3(filepath):
 
 def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    project_dir = os.path.dirname(script_dir)
+    project_dir = os.path.dirname(os.path.dirname(script_dir))
     
     gff3_path = os.path.join(project_dir, 'data', 'sequence.gff3')
     output_dir = os.path.join(project_dir, 'data', 'intermediate')

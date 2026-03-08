@@ -4,12 +4,11 @@ A Graph ML pipeline that builds a heterogeneous Knowledge Graph from mitochondri
 
 ## Overview
 
-MitoGraph integrates three data sources — **RefSeq GFF3** (gene annotations), **ClinVar** (variant classifications), and **MITOMAP** (disease associations, conservation scores) — into a single Knowledge Graph. A Graph Neural Network (SAGEConv-based heterogeneous encoder) is trained on known pathogenic variant–phenotype associations, then used to predict potential disease links for VUS.
+MitoGraph integrates three data sources — **RefSeq GFF3** (gene annotations), **ClinVar** (variant classifications), and **MITOMAP** (disease associations, conservation scores) — into a single Knowledge Graph. A Graph Neural Network (GATv2Conv-based heterogeneous encoder with attention) is trained on known pathogenic variant–phenotype associations, then used to predict potential disease links for VUS.
 
 ### Key Results
 - **Test AUPRC: 0.80** | **Test AUROC: 0.77**
 - 1,228 VUS scored against 808 disease phenotypes
-- 911 VUS flagged as clustering with pathogenic variants in latent space
 
 ## Graph Structure
 
@@ -30,14 +29,14 @@ MitoGraph integrates three data sources — **RefSeq GFF3** (gene annotations), 
 ## Pipeline
 
 ```
-Phase A: ETL                    Phase B: Graph              Phase C: ML
-┌─────────────────┐            ┌──────────────────┐        ┌──────────────────┐
-│ a1: Parse GFF3  │            │ b1: Build graph  │        │ c1: → PyG        │
-│ a2: Parse ClinVar│───────────│ b2: K-mer edges  │────────│ c2: RGCN model   │
-│ a3: MITOMAP SQL │            │ b3: Export stats │        │ c3: Train        │
-│ a4: Merge + PhyloP│          └──────────────────┘        │ c4: Predict VUS  │
-│ a5: Complex map │                                        └──────────────────┘
-└─────────────────┘
+src/etl/                  src/graph/                src/ml/
+┌───────────────────┐    ┌──────────────────┐      ┌──────────────────┐
+│ parse_gff3.py     │    │ build_graph.py   │      │ graph_to_pyg.py  │
+│ parse_clinvar.py  │───▶│ kmer_similarity  │─────▶│ model.py (GAT)   │
+│ extract_mitomap.py│    │ export_graph.py  │      │ train.py         │
+│ merge_variants.py │    └──────────────────┘      │ predict_vus.py   │
+│ build_complex_map │                              └──────────────────┘
+└───────────────────┘
 ```
 
 ## Setup
@@ -55,22 +54,22 @@ conda run -n mitograph python -m pip install torch-geometric umap-learn
 ## Usage
 
 ```bash
-# Phase A: ETL (data must be in data/)
-python src/a1_parse_gff3.py
-python src/a2_parse_clinvar.py
-python src/a3_extract_mitomap.py
-python src/a4_merge_variants.py
-python src/a5_build_complex_mapping.py
+# ETL (data must be in data/)
+python src/etl/parse_gff3.py
+python src/etl/parse_clinvar.py
+python src/etl/extract_mitomap.py
+python src/etl/merge_variants.py
+python src/etl/build_complex_mapping.py
 
-# Phase B: Knowledge Graph
-python src/b1_build_graph.py
-python src/b2_kmer_similarity.py
-python src/b3_export_graph.py
+# Knowledge Graph
+python src/graph/build_graph.py
+python src/graph/kmer_similarity.py
+python src/graph/export_graph.py
 
-# Phase C: Graph ML
-python src/c1_graph_to_pyg.py
-python src/c3_train.py
-python src/c4_predict_vus.py
+# Graph ML
+python src/ml/graph_to_pyg.py
+python src/ml/train.py
+python src/ml/predict_vus.py
 ```
 
 ## Design Decisions

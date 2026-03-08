@@ -27,7 +27,7 @@ from sklearn.metrics import (
     average_precision_score, roc_auc_score, precision_recall_curve
 )
 
-from c2_model import MitoGraphLinkPredictor
+from model import MitoGraphLinkPredictor
 
 
 def variant_level_split(hetero_data, metadata, train_ratio=0.70,
@@ -173,7 +173,7 @@ def compute_metrics(model, z_dict, edge_index, neg_edge_index):
 
 def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    project_dir = os.path.dirname(script_dir)
+    project_dir = os.path.dirname(os.path.dirname(script_dir))
     intermediate_dir = os.path.join(project_dir, 'data', 'intermediate')
     results_dir = os.path.join(project_dir, 'data', 'results')
     os.makedirs(results_dir, exist_ok=True)

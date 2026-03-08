@@ -36,7 +36,7 @@ except ImportError:
 
 def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    project_dir = os.path.dirname(script_dir)
+    project_dir = os.path.dirname(os.path.dirname(script_dir))
     intermediate_dir = os.path.join(project_dir, 'data', 'intermediate')
     results_dir = os.path.join(project_dir, 'data', 'results')
     os.makedirs(results_dir, exist_ok=True)

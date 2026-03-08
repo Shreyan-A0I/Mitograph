@@ -33,7 +33,7 @@ def simplify_clinical_significance(sig):
 
 def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    project_dir = os.path.dirname(script_dir)
+    project_dir = os.path.dirname(os.path.dirname(script_dir))
     
     input_path = os.path.join(project_dir, 'data', 'clinvar_mt_variant_summary.csv')
     output_dir = os.path.join(project_dir, 'data', 'intermediate')

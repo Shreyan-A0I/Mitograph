@@ -119,7 +119,7 @@ def extract_tables_from_dump(dump_path, output_dir):
 
 def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    project_dir = os.path.dirname(script_dir)
+    project_dir = os.path.dirname(os.path.dirname(script_dir))
     
     dump_path = os.path.join(project_dir, 'data', 'mitomap.dump.sql')
     output_dir = os.path.join(project_dir, 'data', 'intermediate')
