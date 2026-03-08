@@ -25,10 +25,6 @@ The results are served through an interactive Next.js dashboard deployed on Verc
 
 ![Interactive network graph with gene labels and complex hierarchy](docs/network_graph.png)
 
-**VUS prediction table** - Sortable, searchable, exportable. Variants displayed in standard mtDNA nomenclature (m.3733G>A). Confidence bars cap at >99.9% to reflect model saturation. Click any point on the charts above to filter the table.
-
-![Prediction table with confidence bars and CSV export](docs/prediction_table.png)
-
 **Dashboard source code:** [Shreyan-A0I/Mitomap-app](https://github.com/Shreyan-A0I/Mitomap-app)
 
 ## Graph Structure
