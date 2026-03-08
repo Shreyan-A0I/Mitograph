@@ -1,41 +1,43 @@
 #!/usr/bin/env python3
 """
-Phase C - Step 2: RGCN-based link prediction model for heterogeneous graphs.
+Graph Attention Network (GATv2) link prediction model for heterogeneous graphs.
 
 Architecture:
-  Encoder: 2-layer HeteroConv (SAGEConv per edge type) on the heterogeneous graph
+  Encoder: 2-layer HeteroConv (GATv2Conv per edge type, 4 attention heads)
   Decoder: Dot-product decoder for (Variant, ASSOCIATED_WITH, Phenotype) edges
-  Loss:    Binary cross-entropy with negative sampling
+  Loss:    Binary cross-entropy with hard negative mining
 
-This model learns node embeddings that capture the graph structure, then
-uses a dot-product between variant and phenotype embeddings to predict
-whether a variant is associated with a given phenotype.
+GATv2Conv learns attention weights per edge, dynamically deciding which
+neighbor messages matter most. This prevents noisy KMER_SIMILARITY edges
+from washing out strong biological signals from LOCATED_IN edges.
 """
 
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from torch_geometric.nn import SAGEConv, HeteroConv, Linear
+from torch_geometric.nn import GATv2Conv, HeteroConv, Linear
 
 
 class MitoGraphEncoder(nn.Module):
     """
-    Heterogeneous graph encoder using SAGEConv per edge type.
-    Learns node embeddings for each node type through 2 message-passing layers.
+    Heterogeneous graph encoder using GATv2Conv per edge type.
+    Multi-head attention (4 heads) learns which edges carry biological signal.
     """
 
     def __init__(self, metadata, hidden_dim=64, out_dim=32,
                  variant_in_dim=10, gene_in_dim=3, complex_in_dim=4,
-                 phenotype_in_dim=64):
+                 phenotype_in_dim=64, heads=4):
         """
         Args:
             metadata: tuple (node_types, edge_types) from HeteroData.metadata()
-            hidden_dim: hidden layer dimension
+            hidden_dim: hidden layer dimension (per head)
             out_dim: output embedding dimension
             *_in_dim: input feature dimensions for each node type
+            heads: number of attention heads
         """
         super().__init__()
 
+        self.heads = heads
         node_types, edge_types = metadata
 
         # Input projection layers (project each node type to hidden_dim)
@@ -49,16 +51,23 @@ class MitoGraphEncoder(nn.Module):
         for nt in node_types:
             self.input_proj[nt] = Linear(in_dims.get(nt, hidden_dim), hidden_dim)
 
-        # Layer 1: HeteroConv with SAGEConv per edge type
+        # Layer 1: HeteroConv with GATv2Conv per edge type
+        # GATv2Conv with heads=4 outputs hidden_dim (concat mode → hidden_dim * heads,
+        # so we use hidden_dim // heads per head to keep total = hidden_dim)
+        head_dim = hidden_dim // heads
         conv1_dict = {}
         for edge_type in edge_types:
-            conv1_dict[edge_type] = SAGEConv((-1, -1), hidden_dim)
+            conv1_dict[edge_type] = GATv2Conv(
+                (-1, -1), head_dim, heads=heads, concat=True, add_self_loops=False
+            )
         self.conv1 = HeteroConv(conv1_dict, aggr='mean')
 
-        # Layer 2: HeteroConv with SAGEConv per edge type
+        # Layer 2: GATv2Conv → out_dim (single head for final embedding)
         conv2_dict = {}
         for edge_type in edge_types:
-            conv2_dict[edge_type] = SAGEConv((-1, -1), out_dim)
+            conv2_dict[edge_type] = GATv2Conv(
+                (-1, -1), out_dim, heads=1, concat=False, add_self_loops=False
+            )
         self.conv2 = HeteroConv(conv2_dict, aggr='mean')
 
         self.dropout = nn.Dropout(0.3)
@@ -77,11 +86,11 @@ class MitoGraphEncoder(nn.Module):
         for nt, x in x_dict.items():
             h_dict[nt] = self.input_proj[nt](x)
 
-        # Layer 1
+        # Layer 1: multi-head attention
         h_dict = self.conv1(h_dict, edge_index_dict)
-        h_dict = {nt: F.relu(self.dropout(h)) for nt, h in h_dict.items()}
+        h_dict = {nt: F.elu(self.dropout(h)) for nt, h in h_dict.items()}
 
-        # Layer 2
+        # Layer 2: single-head → final embeddings
         h_dict = self.conv2(h_dict, edge_index_dict)
 
         return h_dict
@@ -110,16 +119,17 @@ class DotProductDecoder(nn.Module):
 
 class MitoGraphLinkPredictor(nn.Module):
     """
-    Full model: Encoder + Decoder for link prediction.
+    Full model: GATv2 Encoder + Dot-Product Decoder for link prediction.
     """
 
     def __init__(self, metadata, hidden_dim=64, out_dim=32,
                  variant_in_dim=10, gene_in_dim=3, complex_in_dim=4,
-                 phenotype_in_dim=64):
+                 phenotype_in_dim=64, heads=4):
         super().__init__()
         self.encoder = MitoGraphEncoder(
             metadata, hidden_dim, out_dim,
-            variant_in_dim, gene_in_dim, complex_in_dim, phenotype_in_dim
+            variant_in_dim, gene_in_dim, complex_in_dim, phenotype_in_dim,
+            heads=heads
         )
         self.decoder = DotProductDecoder()
 

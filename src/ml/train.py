@@ -1,21 +1,26 @@
 #!/usr/bin/env python3
 """
-Phase C - Step 3: Training pipeline with variant-level split.
+Training pipeline with variant-level split and hard negative mining.
 
 Implements:
   - Variant-level train/val/test split (70/15/15) to prevent edge leakage
-  - Negative sampling for binary cross-entropy loss
+  - Hard negative mining: benign variants forced to score 0.0 against all phenotypes
+  - Random negative sampling for standard BCE loss
   - Early stopping on validation AUPRC
-  - Logging of AUPRC, AUROC, precision@K per epoch
 
 The key insight: we hold out ENTIRE VARIANTS for val/test, so the model
 must predict phenotype associations for completely unseen variants.
+
+Hard negative mining teaches the model what "benign" looks like — without it,
+the model has no signal to suppress scores for variants with low conservation
+and benign graph topology, leading to ~74% false-positive rate on VUS.
 
 Output: data/results/training_metrics.json
         data/results/model_checkpoint.pt
 """
 
 import os
+import sys
 import json
 import random
 import math
@@ -107,7 +112,7 @@ def variant_level_split(hetero_data, metadata, train_ratio=0.70,
 
 def negative_sampling(pos_edge_index, num_variants, num_phenotypes, num_neg=1):
     """
-    Generate negative (variant, phenotype) pairs.
+    Generate random negative (variant, phenotype) pairs.
     For each positive edge, sample `num_neg` random phenotypes not in the
     positive set for that variant.
     """
@@ -130,6 +135,57 @@ def negative_sampling(pos_edge_index, num_variants, num_phenotypes, num_neg=1):
             neg_dst.append(p)
 
     return torch.tensor([neg_src, neg_dst], dtype=torch.long)
+
+
+def hard_negative_sampling(var_labels, num_phenotypes, max_samples_per_epoch=500):
+    """
+    Hard negative mining: sample (benign_variant, phenotype) pairs.
+
+    The model must learn to predict score=0.0 for these pairs, teaching it
+    that variants with benign conservation profiles and benign graph topology
+    should NOT be linked to any phenotype.
+
+    This directly addresses the false-positive problem where the model flags
+    74% of VUS as pathogenic because it never learned what "benign" looks like.
+
+    Args:
+        var_labels: dict mapping variant_idx -> clinical significance label
+        num_phenotypes: total number of phenotype nodes
+        max_samples_per_epoch: cap per epoch to avoid overwhelming the loss
+
+    Returns:
+        hard_neg_edge_index: [2, num_hard_neg] tensor
+    """
+    # Collect all benign/likely benign variant indices
+    benign_indices = []
+    for idx_str, label in var_labels.items():
+        label_lower = label.lower()
+        if 'benign' in label_lower:
+            benign_indices.append(int(idx_str))
+
+    if not benign_indices:
+        return torch.zeros((2, 0), dtype=torch.long)
+
+    # Sample benign variants and random phenotypes
+    hard_src, hard_dst = [], []
+    n_per_variant = max(1, max_samples_per_epoch // len(benign_indices))
+
+    for v_idx in benign_indices:
+        # Sample a few random phenotypes for each benign variant
+        sampled_phenos = random.sample(
+            range(num_phenotypes), min(n_per_variant, num_phenotypes)
+        )
+        for p_idx in sampled_phenos:
+            hard_src.append(v_idx)
+            hard_dst.append(p_idx)
+
+    # Subsample if too many
+    if len(hard_src) > max_samples_per_epoch:
+        indices = random.sample(range(len(hard_src)), max_samples_per_epoch)
+        hard_src = [hard_src[i] for i in indices]
+        hard_dst = [hard_dst[i] for i in indices]
+
+    return torch.tensor([hard_src, hard_dst], dtype=torch.long)
 
 
 def build_message_passing_edges(hetero_data, train_edge_index):
@@ -194,6 +250,11 @@ def main():
     num_phenotypes = hetero_data['phenotype'].x.shape[0]
     pheno_in_dim = hetero_data['phenotype'].x.shape[1]
 
+    # Count benign variants for hard negative mining
+    benign_count = sum(1 for l in metadata['var_labels'].values()
+                       if 'benign' in l.lower())
+    print(f"\nBenign/Likely benign variants available for hard negatives: {benign_count}")
+
     # --- Initialize model ---
     mp_edge_index_dict = build_message_passing_edges(hetero_data, train_ei)
     model_metadata = hetero_data.metadata()
@@ -206,6 +267,7 @@ def main():
         gene_in_dim=hetero_data['gene'].x.shape[1],
         complex_in_dim=hetero_data['complex'].x.shape[1],
         phenotype_in_dim=pheno_in_dim,
+        heads=4,
     )
 
     optimizer = torch.optim.Adam(model.parameters(), lr=0.005, weight_decay=1e-5)
@@ -218,6 +280,7 @@ def main():
     history = []
 
     print(f"\nTraining for up to {n_epochs} epochs (patience={patience})...")
+    print(f"  Using: GATv2Conv (4 heads) + Hard Negative Mining")
     print(f"{'Epoch':>5} | {'Loss':>8} | {'Train AUPRC':>11} | {'Val AUPRC':>10} | {'Val AUROC':>10}")
     print('-' * 60)
 
@@ -225,23 +288,37 @@ def main():
         model.train()
 
         # Generate negative samples for this epoch
-        neg_train_ei = negative_sampling(train_ei, num_variants, num_phenotypes, num_neg=3)
+        neg_train_ei = negative_sampling(
+            train_ei, num_variants, num_phenotypes, num_neg=3)
+
+        # Hard negative mining: benign variants × random phenotypes → score 0.0
+        hard_neg_ei = hard_negative_sampling(
+            metadata['var_labels'], num_phenotypes, max_samples_per_epoch=500)
 
         # Forward pass
         x_dict = {nt: hetero_data[nt].x for nt in hetero_data.node_types}
         z_dict = model(x_dict, mp_edge_index_dict)
 
-        # Positive edge scores
+        # Positive edge scores (pathogenic → phenotype)
         pos_scores = model.predict_links(z_dict, train_ei)
-        # Negative edge scores
+        # Random negative edge scores
         neg_scores = model.predict_links(z_dict, neg_train_ei)
 
-        # Binary cross-entropy loss
+        # Loss: BCE for pos + neg
         pos_loss = F.binary_cross_entropy_with_logits(
             pos_scores, torch.ones_like(pos_scores))
         neg_loss = F.binary_cross_entropy_with_logits(
             neg_scores, torch.zeros_like(neg_scores))
-        loss = pos_loss + neg_loss
+
+        # Hard negative loss: force benign variants to score 0.0 against phenotypes
+        if hard_neg_ei.shape[1] > 0:
+            hard_neg_scores = model.predict_links(z_dict, hard_neg_ei)
+            hard_neg_loss = F.binary_cross_entropy_with_logits(
+                hard_neg_scores, torch.zeros_like(hard_neg_scores))
+        else:
+            hard_neg_loss = torch.tensor(0.0)
+
+        loss = pos_loss + neg_loss + hard_neg_loss
 
         optimizer.zero_grad()
         loss.backward()
@@ -254,14 +331,19 @@ def main():
                 z_dict_eval = model(x_dict, mp_edge_index_dict)
 
             # Train metrics
-            neg_train_eval = negative_sampling(train_ei, num_variants, num_phenotypes, num_neg=1)
-            train_auprc, _ = compute_metrics(model, z_dict_eval, train_ei, neg_train_eval)
+            neg_train_eval = negative_sampling(
+                train_ei, num_variants, num_phenotypes, num_neg=1)
+            train_auprc, _ = compute_metrics(
+                model, z_dict_eval, train_ei, neg_train_eval)
 
             # Val metrics
-            neg_val_ei = negative_sampling(val_ei, num_variants, num_phenotypes, num_neg=1)
-            val_auprc, val_auroc = compute_metrics(model, z_dict_eval, val_ei, neg_val_ei)
+            neg_val_ei = negative_sampling(
+                val_ei, num_variants, num_phenotypes, num_neg=1)
+            val_auprc, val_auroc = compute_metrics(
+                model, z_dict_eval, val_ei, neg_val_ei)
 
-            print(f"{epoch:>5} | {loss.item():>8.4f} | {train_auprc:>11.4f} | {val_auprc:>10.4f} | {val_auroc:>10.4f}")
+            print(f"{epoch:>5} | {loss.item():>8.4f} | "
+                  f"{train_auprc:>11.4f} | {val_auprc:>10.4f} | {val_auroc:>10.4f}")
 
             history.append({
                 'epoch': epoch,
@@ -287,7 +369,8 @@ def main():
                 patience_counter += 5  # since we evaluate every 5 epochs
 
             if patience_counter >= patience:
-                print(f"\nEarly stopping at epoch {epoch} (best val AUPRC: {best_val_auprc:.4f})")
+                print(f"\nEarly stopping at epoch {epoch} "
+                      f"(best val AUPRC: {best_val_auprc:.4f})")
                 break
 
     # --- Final test evaluation ---
@@ -301,8 +384,10 @@ def main():
         x_dict = {nt: hetero_data[nt].x for nt in hetero_data.node_types}
         z_dict_test = model(x_dict, mp_edge_index_dict)
 
-    neg_test_ei = negative_sampling(test_ei, num_variants, num_phenotypes, num_neg=1)
-    test_auprc, test_auroc = compute_metrics(model, z_dict_test, test_ei, neg_test_ei)
+    neg_test_ei = negative_sampling(
+        test_ei, num_variants, num_phenotypes, num_neg=1)
+    test_auprc, test_auroc = compute_metrics(
+        model, z_dict_test, test_ei, neg_test_ei)
 
     print(f"Test AUPRC: {test_auprc:.4f}")
     print(f"Test AUROC: {test_auroc:.4f}")
@@ -319,6 +404,13 @@ def main():
             'train_edges': int(train_ei.shape[1]),
             'val_edges': int(val_ei.shape[1]),
             'test_edges': int(test_ei.shape[1]),
+        },
+        'model_config': {
+            'architecture': 'GATv2Conv',
+            'attention_heads': 4,
+            'hidden_dim': 64,
+            'out_dim': 32,
+            'hard_negative_mining': True,
         }
     }
 

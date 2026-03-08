@@ -14,6 +14,7 @@ Output: data/results/vus_predictions.csv
 
 import os
 import json
+import math
 
 import numpy as np
 import pandas as pd
@@ -24,6 +25,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.cluster import DBSCAN
 from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import silhouette_score
 
 try:
     import umap
@@ -138,8 +140,22 @@ def main():
     scaler = StandardScaler()
     all_embs_scaled = scaler.fit_transform(all_embs)
 
-    db = DBSCAN(eps=0.8, min_samples=3)
+    db = DBSCAN(eps=0.4, min_samples=5)
     cluster_labels = db.fit_predict(all_embs_scaled)
+
+    # Evaluate cluster quality with Silhouette Score
+    non_noise_mask = cluster_labels != -1
+    n_clusters = len(set(cluster_labels[non_noise_mask]))
+    n_noise = (~non_noise_mask).sum()
+    print(f"Clusters found: {n_clusters}, Noise points: {n_noise}/{len(cluster_labels)}")
+
+    if n_clusters >= 2 and non_noise_mask.sum() > n_clusters:
+        sil_score = silhouette_score(
+            all_embs_scaled[non_noise_mask], cluster_labels[non_noise_mask])
+        print(f"Silhouette Score: {sil_score:.4f} (>0 = meaningful clusters)")
+    else:
+        sil_score = float('nan')
+        print(f"Silhouette Score: N/A (need ≥2 clusters with ≥2 points each)")
 
     # Assign labels to each group
     n_path = len(path_indices)
@@ -228,6 +244,14 @@ def main():
         'vus_flagged': vus_in_path_clusters,
         'total_predictions': len(predictions),
         'visualization_method': method,
+        'clustering': {
+            'algorithm': 'DBSCAN',
+            'eps': 0.4,
+            'min_samples': 5,
+            'n_clusters': n_clusters,
+            'n_noise': int(n_noise),
+            'silhouette_score': float(sil_score) if not math.isnan(sil_score) else None,
+        },
     }
 
     summary_path = os.path.join(results_dir, 'vus_summary.json')
