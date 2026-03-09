@@ -191,8 +191,15 @@ def main():
 
         clin_sig = raw.get('clinical_significance', 'Unknown')
         pos = raw.get('pos', int(round(
-            math.atan2(feats[6], feats[7]) / (2 * math.pi) * 16569
-        )) if feats[7] != 0 else 0)
+            math.atan2(feats[1], feats[2]) / (2 * math.pi) * 16569
+        )) if feats[2] != 0 else 0)
+
+        is_transition = bool(feats[3] > 0.5)
+        is_transversion = bool(feats[4] > 0.5)
+        is_indel = bool(feats[5] > 0.5)
+        mut_type = "Indel"
+        if is_transition: mut_type = "Transition"
+        elif is_transversion: mut_type = "Transversion"
 
         features = {
             'position': int(pos) if pos else 0,
@@ -200,8 +207,7 @@ def main():
             'alt': raw.get('alt', '?'),
             'clinical_significance': clin_sig,
             'phylop': round(float(feats[0]), 4),
-            'apogee': round(float(feats[8]), 4),
-            'mitotip': round(float(feats[9]), 4),
+            'mutation_type': mut_type
         }
 
         nodes.append({

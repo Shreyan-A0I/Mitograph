@@ -47,20 +47,17 @@ The results are served through an interactive Next.js dashboard deployed on Verc
 
 Each node type has a fixed-length feature vector fed to the GATv2Conv encoder:
 
-**Variant (10D):**
+**Variant (14D):**
 
-| Dim | Feature | Source |
-|-----|---------|--------|
-| 0 | PhyloP conservation score | UCSC (median-imputed) |
-| 1 | is_pathogenic | ClinVar one-hot |
-| 2 | is_likely_pathogenic | ClinVar one-hot |
-| 3 | is_benign | ClinVar one-hot |
-| 4 | is_likely_benign | ClinVar one-hot |
-| 5 | is_vus | ClinVar one-hot |
-| 6 | sin(2π·pos/16569) | Circular position |
-| 7 | cos(2π·pos/16569) | Circular position |
-| 8 | APOGEE score | MITOMAP (0 if missing) |
-| 9 | MitoTIP score | MITOMAP (0 if missing) |
+| Dim | Feature | Description |
+|-----|---------|-------------|
+| 0 | PhyloP conservation | 100-vertebrate basewise score (median-imputed) |
+| 1-2 | Circular position | Encoded as `sin(2π·pos/16569)` and `cos(2π·pos/16569)` |
+| 3 | is_transition | 1 if A↔G or C↔T (biochemically more tolerated) |
+| 4 | is_transversion | 1 if A↔C, A↔T, C↔G, G↔T (structurally disruptive) |
+| 5 | is_indel | 1 if insertion or deletion |
+| 6-9 | Reference Nucleotide | One-hot encoded `[A, C, G, T]` (all 0 if indel) |
+| 10-13 | Alternate Nucleotide | One-hot encoded `[A, C, G, T]` (all 0 if indel) |
 
 **Gene (3D):** one-hot `[tRNA, rRNA, protein_coding]`
 
