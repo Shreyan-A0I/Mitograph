@@ -95,6 +95,55 @@ class MitoGraphEncoder(nn.Module):
 
         return h_dict
 
+    def forward_with_attention(self, x_dict, edge_index_dict):
+        """
+        Like forward(), but also returns attention weights from conv2.
+
+        Returns:
+            h_dict: dict[node_type] -> embeddings
+            attention_dict: dict[edge_type] -> (edge_index, alpha)
+                alpha shape: [num_edges, heads]
+        """
+        # Project inputs to hidden_dim
+        h_dict = {}
+        for nt, x in x_dict.items():
+            h_dict[nt] = self.input_proj[nt](x)
+
+        # Layer 1: multi-head attention (no attention extraction needed)
+        h_dict = self.conv1(h_dict, edge_index_dict)
+        h_dict = {nt: F.elu(self.dropout(h)) for nt, h in h_dict.items()}
+
+        # Layer 2: manually iterate to extract attention weights
+        attention_dict = {}
+        out_dict = {}
+
+        for edge_type, conv in self.conv2.convs.items():
+            src_type, _, dst_type = edge_type
+            if edge_type not in edge_index_dict:
+                continue
+            edge_index = edge_index_dict[edge_type]
+            src_x = h_dict[src_type]
+            dst_x = h_dict[dst_type]
+
+            # GATv2Conv with attention weights
+            out, (ei, alpha) = conv(
+                (src_x, dst_x), edge_index,
+                return_attention_weights=True
+            )
+            attention_dict[edge_type] = (ei, alpha)
+
+            # Aggregate outputs (mean) like HeteroConv does
+            if dst_type not in out_dict:
+                out_dict[dst_type] = []
+            out_dict[dst_type].append(out)
+
+        # Mean aggregation across edge types (same as HeteroConv aggr='mean')
+        h_dict = {}
+        for nt, outs in out_dict.items():
+            h_dict[nt] = torch.stack(outs).mean(dim=0)
+
+        return h_dict, attention_dict
+
 
 class DotProductDecoder(nn.Module):
     """
@@ -136,6 +185,10 @@ class MitoGraphLinkPredictor(nn.Module):
     def forward(self, x_dict, edge_index_dict):
         """Encode all nodes → embeddings dict."""
         return self.encoder(x_dict, edge_index_dict)
+
+    def forward_with_attention(self, x_dict, edge_index_dict):
+        """Encode all nodes and return attention weights from final layer."""
+        return self.encoder.forward_with_attention(x_dict, edge_index_dict)
 
     def predict_links(self, z_dict, edge_index):
         """

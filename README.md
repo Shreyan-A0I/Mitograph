@@ -43,6 +43,31 @@ The results are served through an interactive Next.js dashboard deployed on Verc
 | ASSOCIATED_WITH | 620 | Variant → Phenotype (confirmed associations) |
 | KMER_SIMILARITY | 7,437 | Variant ↔ Variant (4-mer cosine sim > 0.85, ±20bp circular window) |
 
+### Node Feature Vectors
+
+Each node type has a fixed-length feature vector fed to the GATv2Conv encoder:
+
+**Variant (10D):**
+
+| Dim | Feature | Source |
+|-----|---------|--------|
+| 0 | PhyloP conservation score | UCSC (median-imputed) |
+| 1 | is_pathogenic | ClinVar one-hot |
+| 2 | is_likely_pathogenic | ClinVar one-hot |
+| 3 | is_benign | ClinVar one-hot |
+| 4 | is_likely_benign | ClinVar one-hot |
+| 5 | is_vus | ClinVar one-hot |
+| 6 | sin(2π·pos/16569) | Circular position |
+| 7 | cos(2π·pos/16569) | Circular position |
+| 8 | APOGEE score | MITOMAP (0 if missing) |
+| 9 | MitoTIP score | MITOMAP (0 if missing) |
+
+**Gene (3D):** one-hot `[tRNA, rRNA, protein_coding]`
+
+**Complex (4D):** one-hot `[I, III, IV, V]`
+
+**Phenotype (64D):** Random unit-vector projection (Johnson-Lindenstrauss) from 808D identity, shaped by GATv2Conv message passing during training
+
 ## Pipeline
 
 ```
