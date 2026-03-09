@@ -9,7 +9,7 @@ A Graph ML pipeline that builds a heterogeneous Knowledge Graph from mitochondri
 MitoGraph integrates three data sources - **RefSeq GFF3** (gene annotations), **ClinVar** (variant classifications), and **MITOMAP** (disease associations, conservation scores) - into a single Knowledge Graph. A Graph Neural Network (GATv2Conv-based heterogeneous encoder with attention) is trained on known pathogenic variant-phenotype associations, then used to predict potential disease links for VUS.
 
 ### Key Results
-- **Test AUPRC: 0.792** | **Test AUROC: 0.765** | **Silhouette: 0.577**
+- **Test AUPRC: 0.792** | **Test AUROC: 0.789** | **Silhouette: 0.577**
 - 1,228 VUS scored against 808 disease phenotypes
 - 482 VUS flagged as potentially pathogenic (39%)
 
@@ -66,32 +66,7 @@ Each node type has a fixed-length feature vector fed to the GATv2Conv encoder:
 
 **Complex (4D):** one-hot `[I, III, IV, V]`
 
-**Phenotype (64D):** Random unit-vector projection (Johnson-Lindenstrauss) from 808D identity, shaped by GATv2Conv message passing during training
-
-## Pipeline
-
-```
-src/etl/                  src/graph/                src/ml/
-┌───────────────────┐    ┌──────────────────┐      ┌──────────────────┐
-│ parse_gff3.py     │    │ build_graph.py   │      │ graph_to_pyg.py  │
-│ parse_clinvar.py  │───▶│ kmer_similarity  │─────▶│ model.py (GAT)   │
-│ extract_mitomap.py│    │ export_graph.py  │      │ train.py         │
-│ merge_variants.py │    └──────────────────┘      │ predict_vus.py   │
-│ build_complex_map │                              │ export_graph_json │
-└───────────────────┘                              └──────────────────┘
-```
-
-## Setup
-
-```bash
-# Create conda environment
-conda env create -f environment.yml
-conda activate mitograph
-
-# Install ML dependencies
-conda run -n mitograph python -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
-conda run -n mitograph python -m pip install torch-geometric umap-learn
-```
+**Phenotype (64D):** Random unit-vector projection later shaped into something meaningful by GATv2Conv message passing during training
 
 ## Design Decisions
 
@@ -102,3 +77,12 @@ conda run -n mitograph python -m pip install torch-geometric umap-learn
 - **4-mer Similarity**: ±20bp windows on the circular genome; cosine similarity threshold of 0.85
 - **Variant-Level Split**: Entire variants held out for val/test to prevent edge leakage through k-mer similarity edges
 - **DBSCAN Clustering**: eps=0.4, min_samples=5 on UMAP embeddings to identify pathogenic clusters (Silhouette=0.577)
+
+## Data Sources & Acknowledgements
+
+MitoGraph's neuro-symbolic architecture relies on the expert curation and open-access data provided by the following institutions:
+
+- **MITOMAP**: The definitive human mitochondrial genome database. MITOMAP provided the expertly curated variant-to-phenotype linkages, functional classifications (mmut, rtmut), and the machine-learning-derived APOGEE pathogenicity probabilities.
+- **ClinVar (NCBI)**: A freely accessible, public archive of reports of the relationships among human variations and phenotypes. ClinVar provided the foundational baseline of clinical observations and the primary set of Variants of Uncertain Significance (VUS) for this project's predictive modeling.
+- **rCRS (Revised Cambridge Reference Sequence)**: Sourced via NCBI RefSeq (NC_012920.1), this 16,569 bp sequence served as the physical coordinate system for the knowledge graph and k-mer similarity generation.
+- **PhyloP (UCSC Genome Browser)**: Provided the base-by-base evolutionary conservation scores used as primary structural features for the Graph Attention Network.
