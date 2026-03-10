@@ -2,7 +2,7 @@
   "n_vus": 1228,
   "n_pathogenic": 116,
   "n_benign": 1611,
-  "vus_in_pathogenic_clusters": 76,
+  "vus_in_pathogenic_clusters": 322,
   "vus_flagged": [
     {
       "variant_id": "var_1183_T_C",
@@ -17,447 +17,1923 @@
       "in_pathogenic_cluster": true
     },
     {
+      "variant_id": "var_3249_G_A",
+      "variant_idx": 257,
+      "cluster": 1,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_3250_T_C",
+      "variant_idx": 258,
+      "cluster": 1,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_3252_A_T",
+      "variant_idx": 261,
+      "cluster": 1,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_3263_C_T",
+      "variant_idx": 271,
+      "cluster": 1,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_3264_T_C",
+      "variant_idx": 272,
+      "cluster": 1,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_3269_A_G",
+      "variant_idx": 273,
+      "cluster": 1,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_3272_T_C",
+      "variant_idx": 275,
+      "cluster": 1,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_3274_A_G",
+      "variant_idx": 278,
+      "cluster": 1,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_3276_A_G",
+      "variant_idx": 283,
+      "cluster": 1,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_3276_A_T",
+      "variant_idx": 284,
+      "cluster": 1,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_3280_A_G",
+      "variant_idx": 287,
+      "cluster": 1,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_3290_T_A",
+      "variant_idx": 292,
+      "cluster": 1,
+      "in_pathogenic_cluster": true
+    },
+    {
       "variant_id": "var_3328_C_T",
       "variant_idx": 304,
-      "cluster": 2,
+      "cluster": 3,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3380_G_A",
       "variant_idx": 318,
-      "cluster": 1,
+      "cluster": 2,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3419_A_G",
       "variant_idx": 331,
-      "cluster": 1,
+      "cluster": 2,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3472_T_C",
       "variant_idx": 341,
-      "cluster": 2,
+      "cluster": 3,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_3496_G_A",
+      "variant_idx": 348,
+      "cluster": 83,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3569_C_T",
       "variant_idx": 371,
-      "cluster": 1,
+      "cluster": 2,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3607_G_A",
       "variant_idx": 378,
-      "cluster": 2,
+      "cluster": 3,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3622_C_A",
       "variant_idx": 380,
-      "cluster": 1,
+      "cluster": 2,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3652_A_G",
       "variant_idx": 389,
-      "cluster": 2,
+      "cluster": 3,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3653_T_C",
       "variant_idx": 390,
-      "cluster": 1,
+      "cluster": 2,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3661_T_G",
       "variant_idx": 391,
-      "cluster": 2,
+      "cluster": 3,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3685_T_C",
       "variant_idx": 395,
-      "cluster": 2,
+      "cluster": 3,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3709_G_A",
       "variant_idx": 401,
-      "cluster": 2,
+      "cluster": 3,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3710_C_T",
       "variant_idx": 402,
-      "cluster": 1,
+      "cluster": 2,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3734_A_G",
       "variant_idx": 409,
-      "cluster": 1,
+      "cluster": 2,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3764_C_T",
       "variant_idx": 416,
-      "cluster": 1,
+      "cluster": 2,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3793_T_C",
       "variant_idx": 421,
-      "cluster": 2,
+      "cluster": 3,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3887_A_G",
       "variant_idx": 432,
+      "cluster": 3,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_3907_G_A",
+      "variant_idx": 436,
       "cluster": 2,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3937_T_C",
       "variant_idx": 444,
-      "cluster": 2,
+      "cluster": 3,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3991_A_G",
       "variant_idx": 453,
-      "cluster": 1,
+      "cluster": 2,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_4055_T_C",
       "variant_idx": 464,
-      "cluster": 2,
+      "cluster": 3,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_4094_C_T",
       "variant_idx": 471,
-      "cluster": 1,
+      "cluster": 2,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_4105_A_G",
       "variant_idx": 472,
-      "cluster": 2,
+      "cluster": 3,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_4193_T_C",
       "variant_idx": 495,
-      "cluster": 2,
+      "cluster": 3,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_4211_T_C",
       "variant_idx": 497,
-      "cluster": 1,
+      "cluster": 2,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_4258_A_G",
       "variant_idx": 511,
-      "cluster": 2,
+      "cluster": 3,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_7472_A_C",
+      "variant_idx": 1213,
+      "cluster": 4,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_7478_G_A",
+      "variant_idx": 1219,
+      "cluster": 4,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_7479_G_A",
+      "variant_idx": 1220,
+      "cluster": 4,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_7486_G_A",
+      "variant_idx": 1223,
+      "cluster": 4,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_7487_C_T",
+      "variant_idx": 1224,
+      "cluster": 4,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_7496_T_C",
+      "variant_idx": 1228,
+      "cluster": 4,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_7499_C_A",
+      "variant_idx": 1231,
+      "cluster": 4,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_7501_T_A",
+      "variant_idx": 1232,
+      "cluster": 4,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_7502_C_T",
+      "variant_idx": 1234,
+      "cluster": 4,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_7505_T_C",
+      "variant_idx": 1235,
+      "cluster": 4,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8529_G_A",
+      "variant_idx": 1524,
+      "cluster": 5,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8538_T_C",
+      "variant_idx": 1530,
+      "cluster": 5,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8540_T_C",
+      "variant_idx": 1531,
+      "cluster": 5,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8550_A_G",
+      "variant_idx": 1537,
+      "cluster": 5,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8553_C_T",
+      "variant_idx": 1540,
+      "cluster": 5,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8565_A_G",
+      "variant_idx": 1549,
+      "cluster": 5,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8568_C_A",
+      "variant_idx": 1552,
+      "cluster": 5,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8576_T_C",
+      "variant_idx": 1557,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8591_T_C",
+      "variant_idx": 1564,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8593_A_G",
+      "variant_idx": 1565,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8599_C_A",
+      "variant_idx": 1568,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8603_T_G",
+      "variant_idx": 1570,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8605_C_T",
+      "variant_idx": 1572,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8612_T_C",
+      "variant_idx": 1578,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8615_T_C",
+      "variant_idx": 1579,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8623_A_C",
+      "variant_idx": 1585,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8623_A_T",
+      "variant_idx": 1587,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8641_A_G",
+      "variant_idx": 1595,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8642_A_C",
+      "variant_idx": 1597,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8651_T_C",
+      "variant_idx": 1599,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8669_G_C",
+      "variant_idx": 1607,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8686_T_A",
+      "variant_idx": 1614,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8686_T_C",
+      "variant_idx": 1615,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8697_G_T",
+      "variant_idx": 1618,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8699_T_C",
+      "variant_idx": 1619,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8700_A_T",
+      "variant_idx": 1620,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8704_A_G",
+      "variant_idx": 1623,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8714_C_T",
+      "variant_idx": 1628,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8719_G_A",
+      "variant_idx": 1631,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8720_G_A",
+      "variant_idx": 1632,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8720_G_C",
+      "variant_idx": 1633,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8722_C_T",
+      "variant_idx": 1634,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8728_T_C",
+      "variant_idx": 1638,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8731_T_A",
+      "variant_idx": 1639,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8735_T_C",
+      "variant_idx": 1640,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8737_A_G",
+      "variant_idx": 1641,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8744_T_C",
+      "variant_idx": 1643,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8761_A_C",
+      "variant_idx": 1648,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8782_G_A",
+      "variant_idx": 1657,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8783_G_A",
+      "variant_idx": 1658,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8785_C_G",
+      "variant_idx": 1659,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8785_C_T",
+      "variant_idx": 1660,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8789_T_C",
+      "variant_idx": 1661,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8800_T_C",
+      "variant_idx": 1666,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8800_T_G",
+      "variant_idx": 1667,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8803_A_T",
+      "variant_idx": 1669,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8812_A_T",
+      "variant_idx": 1673,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8816_A_G",
+      "variant_idx": 1674,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8821_T_C",
+      "variant_idx": 1676,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8824_A_G",
+      "variant_idx": 1679,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8825_T_C",
+      "variant_idx": 1680,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8839_G_C",
+      "variant_idx": 1685,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8840_C_T",
+      "variant_idx": 1686,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8844_C_A",
+      "variant_idx": 1690,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8868_T_A",
+      "variant_idx": 1702,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8873_G_C",
+      "variant_idx": 1705,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8879_G_A",
+      "variant_idx": 1708,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8884_A_G",
+      "variant_idx": 1711,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8906_A_C",
+      "variant_idx": 1722,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8915_C_T",
+      "variant_idx": 1726,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8921_G_A",
+      "variant_idx": 1728,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8933_C_T",
+      "variant_idx": 1732,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8935_C_T",
+      "variant_idx": 1733,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8936_T_A",
+      "variant_idx": 1734,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8936_T_C",
+      "variant_idx": 1735,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8941_C_T",
+      "variant_idx": 1738,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8951_T_C",
+      "variant_idx": 1743,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8953_A_G",
+      "variant_idx": 1744,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8954_T_C",
+      "variant_idx": 1745,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8959_G_A",
+      "variant_idx": 1746,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8967_C_A",
+      "variant_idx": 1749,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8968_A_C",
+      "variant_idx": 1750,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8980_C_A",
+      "variant_idx": 1758,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_8989_G_C",
+      "variant_idx": 1763,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9005_T_C",
+      "variant_idx": 1770,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9019_A_G",
+      "variant_idx": 1779,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9025_G_A",
+      "variant_idx": 1780,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9026_G_A",
+      "variant_idx": 1781,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9028_C_T",
+      "variant_idx": 1782,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9029_A_G",
+      "variant_idx": 1783,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9032_T_C",
+      "variant_idx": 1784,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9038_T_C",
+      "variant_idx": 1786,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9047_T_C",
+      "variant_idx": 1789,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9049_G_A",
+      "variant_idx": 1790,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9058_A_C",
+      "variant_idx": 1795,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9070_T_C",
+      "variant_idx": 1800,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9082_C_T",
+      "variant_idx": 1808,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9085_C_A",
+      "variant_idx": 1810,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9086_C_T",
+      "variant_idx": 1811,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9122_T_G",
+      "variant_idx": 1830,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9125_C_T",
+      "variant_idx": 1832,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9133_G_A",
+      "variant_idx": 1838,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9134_A_G",
+      "variant_idx": 1839,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9136_A_G",
+      "variant_idx": 1840,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9140_C_T",
+      "variant_idx": 1844,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9160_T_C",
+      "variant_idx": 1853,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9166_T_C",
+      "variant_idx": 1855,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9167_T_C",
+      "variant_idx": 1856,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9169_A_G",
+      "variant_idx": 1857,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9170_C_T",
+      "variant_idx": 1858,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9179_T_C",
+      "variant_idx": 1861,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9194_A_G",
+      "variant_idx": 1868,
+      "cluster": 6,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_9205_T_C",
+      "variant_idx": 1872,
+      "cluster": 6,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_10110_A_G",
       "variant_idx": 2091,
-      "cluster": 3,
+      "cluster": 7,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_10134_C_A",
       "variant_idx": 2094,
-      "cluster": 3,
+      "cluster": 7,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_10158_T_A",
       "variant_idx": 2098,
-      "cluster": 3,
+      "cluster": 7,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_10225_T_C",
       "variant_idx": 2112,
-      "cluster": 3,
+      "cluster": 7,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_10236_A_G",
       "variant_idx": 2113,
-      "cluster": 3,
+      "cluster": 7,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_10266_G_A",
       "variant_idx": 2117,
-      "cluster": 3,
+      "cluster": 7,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_10290_G_A",
       "variant_idx": 2119,
-      "cluster": 3,
+      "cluster": 7,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_10785_T_C",
       "variant_idx": 2207,
-      "cluster": 4,
+      "cluster": 8,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_10857_T_C",
       "variant_idx": 2211,
-      "cluster": 4,
+      "cluster": 8,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11004_G_A",
       "variant_idx": 2229,
-      "cluster": 4,
+      "cluster": 8,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11013_C_A",
       "variant_idx": 2230,
-      "cluster": 4,
+      "cluster": 8,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11069_A_G",
       "variant_idx": 2239,
-      "cluster": 4,
+      "cluster": 8,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11111_T_C",
       "variant_idx": 2244,
-      "cluster": 4,
+      "cluster": 8,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11120_T_C",
       "variant_idx": 2245,
-      "cluster": 4,
+      "cluster": 8,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11139_T_C",
       "variant_idx": 2247,
-      "cluster": 4,
+      "cluster": 8,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11223_T_C",
       "variant_idx": 2257,
-      "cluster": 4,
+      "cluster": 8,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11232_T_C",
       "variant_idx": 2258,
-      "cluster": 4,
+      "cluster": 8,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11289_T_C",
       "variant_idx": 2266,
-      "cluster": 4,
+      "cluster": 8,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11360_A_G",
       "variant_idx": 2272,
-      "cluster": 4,
+      "cluster": 8,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11393_C_T",
       "variant_idx": 2278,
-      "cluster": 4,
+      "cluster": 8,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11443_A_C",
       "variant_idx": 2281,
-      "cluster": 4,
+      "cluster": 8,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11498_A_G",
       "variant_idx": 2286,
-      "cluster": 4,
+      "cluster": 8,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11577_G_A",
       "variant_idx": 2293,
-      "cluster": 4,
+      "cluster": 8,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11590_A_G",
       "variant_idx": 2296,
-      "cluster": 4,
+      "cluster": 8,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11615_A_G",
       "variant_idx": 2297,
-      "cluster": 4,
+      "cluster": 8,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11634_G_A",
       "variant_idx": 2299,
-      "cluster": 4,
+      "cluster": 8,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11733_T_C",
       "variant_idx": 2307,
-      "cluster": 4,
+      "cluster": 8,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11792_T_G",
       "variant_idx": 2311,
-      "cluster": 4,
+      "cluster": 8,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11825_G_A",
       "variant_idx": 2315,
-      "cluster": 4,
+      "cluster": 8,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11896_C_G",
       "variant_idx": 2318,
-      "cluster": 4,
+      "cluster": 8,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11906_G_A",
       "variant_idx": 2320,
-      "cluster": 4,
+      "cluster": 8,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11913_C_T",
       "variant_idx": 2321,
-      "cluster": 4,
+      "cluster": 8,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11978_T_A",
       "variant_idx": 2334,
-      "cluster": 4,
+      "cluster": 8,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_12054_G_A",
       "variant_idx": 2355,
-      "cluster": 4,
+      "cluster": 8,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_12117_T_C",
       "variant_idx": 2362,
-      "cluster": 4,
+      "cluster": 8,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_12144_A_G",
+      "variant_idx": 2372,
+      "cluster": 9,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_12146_A_G",
+      "variant_idx": 2373,
+      "cluster": 9,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_12148_T_C",
+      "variant_idx": 2375,
+      "cluster": 9,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_12150_T_C",
+      "variant_idx": 2376,
+      "cluster": 9,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_12163_A_G",
+      "variant_idx": 2382,
+      "cluster": 9,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_12173_T_A",
+      "variant_idx": 2390,
+      "cluster": 9,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_12176_G_A",
+      "variant_idx": 2392,
+      "cluster": 9,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_12177_A_G",
+      "variant_idx": 2393,
+      "cluster": 9,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_12183_G_A",
+      "variant_idx": 2397,
+      "cluster": 9,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_12184_A_G",
+      "variant_idx": 2398,
+      "cluster": 9,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_12185_G_A",
+      "variant_idx": 2399,
+      "cluster": 9,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_12187_C_A",
+      "variant_idx": 2400,
+      "cluster": 9,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_12204_A_C",
+      "variant_idx": 2412,
+      "cluster": 9,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_12205_C_T",
+      "variant_idx": 2413,
+      "cluster": 9,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_12283_G_A",
+      "variant_idx": 2452,
+      "cluster": 66,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_12302_C_A",
+      "variant_idx": 2461,
+      "cluster": 66,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_12302_C_T",
+      "variant_idx": 2462,
+      "cluster": 66,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_12316_G_A",
+      "variant_idx": 2467,
+      "cluster": 66,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_12317_T_C",
+      "variant_idx": 2468,
+      "cluster": 66,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_12318_G_A",
+      "variant_idx": 2469,
+      "cluster": 66,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_12320_A_G",
+      "variant_idx": 2470,
+      "cluster": 66,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14180_T_G",
+      "variant_idx": 2831,
+      "cluster": 74,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14199_T_C",
+      "variant_idx": 2837,
+      "cluster": 74,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14210_A_G",
+      "variant_idx": 2839,
+      "cluster": 74,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14231_T_C",
+      "variant_idx": 2844,
+      "cluster": 74,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14276_C_T",
+      "variant_idx": 2854,
+      "cluster": 74,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14301_T_C",
+      "variant_idx": 2860,
+      "cluster": 74,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14307_T_C",
+      "variant_idx": 2861,
+      "cluster": 74,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14375_A_C",
+      "variant_idx": 2878,
+      "cluster": 74,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14423_G_A",
+      "variant_idx": 2885,
+      "cluster": 74,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14444_T_C",
+      "variant_idx": 2891,
+      "cluster": 74,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14477_A_G",
+      "variant_idx": 2900,
+      "cluster": 74,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14498_T_C",
+      "variant_idx": 2907,
+      "cluster": 74,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14563_C_T",
+      "variant_idx": 2920,
+      "cluster": 74,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14576_A_G",
+      "variant_idx": 2926,
+      "cluster": 74,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14598_T_C",
+      "variant_idx": 2933,
+      "cluster": 74,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14601_G_A",
+      "variant_idx": 2935,
+      "cluster": 74,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14615_G_A",
+      "variant_idx": 2936,
+      "cluster": 74,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14664_C_T",
+      "variant_idx": 2944,
+      "cluster": 74,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14667_A_G",
+      "variant_idx": 2945,
+      "cluster": 74,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14760_G_A",
+      "variant_idx": 2983,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14765_A_T",
+      "variant_idx": 2984,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14768_A_G",
+      "variant_idx": 2986,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14771_C_A",
+      "variant_idx": 2988,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14778_T_C",
+      "variant_idx": 2989,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14786_A_G",
+      "variant_idx": 2992,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14792_C_T",
+      "variant_idx": 2995,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14795_T_C",
+      "variant_idx": 2997,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14804_G_A",
+      "variant_idx": 3000,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14813_A_T",
+      "variant_idx": 3002,
+      "cluster": 11,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_14825_A_G",
       "variant_idx": 3003,
-      "cluster": 5,
+      "cluster": 10,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14826_T_C",
+      "variant_idx": 3004,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14831_G_C",
+      "variant_idx": 3006,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14846_G_A",
+      "variant_idx": 3010,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14854_C_T",
+      "variant_idx": 3012,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14858_G_A",
+      "variant_idx": 3013,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14873_C_T",
+      "variant_idx": 3020,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14888_G_A",
+      "variant_idx": 3025,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14895_T_C",
+      "variant_idx": 3028,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14900_G_A",
+      "variant_idx": 3029,
+      "cluster": 11,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_14921_G_A",
       "variant_idx": 3032,
-      "cluster": 5,
+      "cluster": 10,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_14945_G_A",
       "variant_idx": 3036,
-      "cluster": 5,
+      "cluster": 10,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14960_G_A",
+      "variant_idx": 3041,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14963_G_A",
+      "variant_idx": 3042,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14969_T_C",
+      "variant_idx": 3044,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14973_G_A",
+      "variant_idx": 3046,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14974_C_G",
+      "variant_idx": 3047,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14976_G_A",
+      "variant_idx": 3048,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14982_T_C",
+      "variant_idx": 3052,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_14985_G_A",
+      "variant_idx": 3053,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15003_G_A",
+      "variant_idx": 3058,
+      "cluster": 11,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_15011_A_G",
       "variant_idx": 3059,
-      "cluster": 5,
+      "cluster": 10,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15016_C_A",
+      "variant_idx": 3061,
+      "cluster": 11,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_15033_T_C",
       "variant_idx": 3064,
-      "cluster": 5,
+      "cluster": 10,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15045_G_A",
+      "variant_idx": 3067,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15059_G_A",
+      "variant_idx": 3072,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15078_A_G",
+      "variant_idx": 3079,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15096_T_C",
+      "variant_idx": 3084,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15100_C_A",
+      "variant_idx": 3087,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15127_C_T",
+      "variant_idx": 3093,
+      "cluster": 11,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_15138_A_G",
       "variant_idx": 3094,
-      "cluster": 5,
+      "cluster": 10,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15141_T_C",
+      "variant_idx": 3095,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15170_G_A",
+      "variant_idx": 3104,
+      "cluster": 11,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_15191_T_A",
       "variant_idx": 3105,
-      "cluster": 5,
+      "cluster": 10,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15192_T_G",
+      "variant_idx": 3107,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15197_T_C",
+      "variant_idx": 3108,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15200_G_A",
+      "variant_idx": 3109,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15237_T_G",
+      "variant_idx": 3129,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15238_C_A",
+      "variant_idx": 3131,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15243_G_A",
+      "variant_idx": 3133,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15245_G_A",
+      "variant_idx": 3134,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15246_G_A",
+      "variant_idx": 3135,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15266_A_G",
+      "variant_idx": 3143,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15288_T_C",
+      "variant_idx": 3147,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15294_T_C",
+      "variant_idx": 3149,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15309_T_C",
+      "variant_idx": 3152,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15357_G_A",
+      "variant_idx": 3172,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15413_T_C",
+      "variant_idx": 3186,
+      "cluster": 11,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_15428_G_A",
       "variant_idx": 3188,
-      "cluster": 5,
+      "cluster": 10,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_15446_C_T",
       "variant_idx": 3193,
-      "cluster": 5,
+      "cluster": 10,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15483_C_T",
+      "variant_idx": 3206,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15488_G_A",
+      "variant_idx": 3209,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15498_G_A",
+      "variant_idx": 3212,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15500_G_A",
+      "variant_idx": 3213,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15501_A_G",
+      "variant_idx": 3214,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15519_T_A",
+      "variant_idx": 3218,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15522_C_G",
+      "variant_idx": 3221,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15525_A_G",
+      "variant_idx": 3223,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15531_T_C",
+      "variant_idx": 3225,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15557_G_A",
+      "variant_idx": 3230,
+      "cluster": 11,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_15567_T_C",
       "variant_idx": 3231,
-      "cluster": 5,
+      "cluster": 10,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15575_G_A",
+      "variant_idx": 3233,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15579_A_G",
+      "variant_idx": 3234,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15581_A_G",
+      "variant_idx": 3235,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15584_A_G",
+      "variant_idx": 3236,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15612_G_A",
+      "variant_idx": 3239,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15614_G_A",
+      "variant_idx": 3240,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15615_G_A",
+      "variant_idx": 3241,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15617_G_C",
+      "variant_idx": 3243,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15623_G_A",
+      "variant_idx": 3245,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15638_A_G",
+      "variant_idx": 3248,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15686_A_G",
+      "variant_idx": 3268,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15690_T_C",
+      "variant_idx": 3269,
+      "cluster": 11,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_15708_G_C",
       "variant_idx": 3274,
-      "cluster": 5,
+      "cluster": 10,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_15770_C_T",
       "variant_idx": 3289,
-      "cluster": 5,
+      "cluster": 10,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15785_T_C",
+      "variant_idx": 3297,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15793_C_A",
+      "variant_idx": 3300,
+      "cluster": 11,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15848_A_G",
+      "variant_idx": 3313,
+      "cluster": 11,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_15873_T_C",
       "variant_idx": 3320,
-      "cluster": 5,
+      "cluster": 10,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15874_A_T",
+      "variant_idx": 3321,
+      "cluster": 11,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_15882_G_A",
       "variant_idx": 3322,
-      "cluster": 5,
+      "cluster": 10,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15921_T_C",
+      "variant_idx": 3353,
+      "cluster": 80,
+      "in_pathogenic_cluster": true
+    },
+    {
+      "variant_id": "var_15932_T_G",
+      "variant_idx": 3364,
+      "cluster": 80,
       "in_pathogenic_cluster": true
     }
   ],
@@ -467,8 +1943,8 @@
     "algorithm": "DBSCAN",
     "eps": 0.4,
     "min_samples": 5,
-    "n_clusters": 43,
-    "n_noise": 2046,
-    "silhouette_score": 0.9750059843063354
+    "n_clusters": 87,
+    "n_noise": 808,
+    "silhouette_score": 0.582216203212738
   }
 }

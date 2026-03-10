@@ -9,7 +9,7 @@ A Graph ML pipeline that builds a heterogeneous Knowledge Graph from mitochondri
 MitoGraph integrates three data sources - **RefSeq GFF3** (gene annotations), **ClinVar** (variant classifications), and **MITOMAP** (disease associations, conservation scores) - into a single Knowledge Graph. A Graph Neural Network (GATv2Conv-based heterogeneous encoder with attention) is trained on known pathogenic variant-phenotype associations, then used to predict potential disease links for VUS.
 
 ### Key Results
-- **Test AUPRC: 0.830** | **Test AUROC: 0.789** | **Silhouette: 0.975**
+- **Test AUPRC: 0.830** | **Test AUROC: 0.789** | **Silhouette: 0.582**
 - 1,228 VUS scored against 808 disease phenotypes
 - Model config: GATv2Conv with 64 dimensions, 8 attention heads, LR 0.005
 
@@ -78,7 +78,7 @@ Each node type has a fixed-length feature vector fed to the GATv2Conv encoder:
 - **Circular Positional Encoding**: mtDNA is circular; positions are encoded as `(sin(2π·pos/16569), cos(2π·pos/16569))` so position 16569 neighbors position 1
 - **PhyloP Conservation**: 100-vertebrate basewise PhyloP scores from UCSC; missing values imputed with median (no 0.0 placeholders)
 - **Variant-Level Split**: Entire variants held out for val/test to prevent edge leakage through k-mer similarity edges
-- **DBSCAN Clustering**: eps=0.4, min_samples=5 on UMAP embeddings to identify pathogenic clusters (Silhouette=0.590)
+- **DBSCAN Clustering**: eps=0.4, min_samples=5 on UMAP embeddings to identify pathogenic clusters (Silhouette=0.582)
 
 ## Data Sources & Acknowledgements
 
