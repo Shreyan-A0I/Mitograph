@@ -2,7 +2,7 @@
   "n_vus": 1228,
   "n_pathogenic": 116,
   "n_benign": 1611,
-  "vus_in_pathogenic_clusters": 482,
+  "vus_in_pathogenic_clusters": 76,
   "vus_flagged": [
     {
       "variant_id": "var_1183_T_C",
@@ -17,2883 +17,447 @@
       "in_pathogenic_cluster": true
     },
     {
-      "variant_id": "var_1377_C_A",
-      "variant_idx": 146,
-      "cluster": 0,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3244_G_A",
-      "variant_idx": 255,
-      "cluster": 2,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3248_G_A",
-      "variant_idx": 256,
-      "cluster": 2,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3249_G_A",
-      "variant_idx": 257,
-      "cluster": 1,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3250_T_C",
-      "variant_idx": 258,
-      "cluster": 1,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3252_A_T",
-      "variant_idx": 261,
-      "cluster": 1,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3263_C_T",
-      "variant_idx": 271,
-      "cluster": 2,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3264_T_C",
-      "variant_idx": 272,
-      "cluster": 2,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3269_A_G",
-      "variant_idx": 273,
-      "cluster": 2,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3272_T_C",
-      "variant_idx": 275,
-      "cluster": 2,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3274_A_G",
-      "variant_idx": 278,
-      "cluster": 2,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3276_A_G",
-      "variant_idx": 283,
-      "cluster": 2,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3276_A_T",
-      "variant_idx": 284,
-      "cluster": 2,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3280_A_G",
-      "variant_idx": 287,
-      "cluster": 2,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3290_T_A",
-      "variant_idx": 292,
-      "cluster": 1,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3310_C_T",
-      "variant_idx": 299,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3313_A_G",
-      "variant_idx": 300,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3316_G_C",
-      "variant_idx": 302,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3320_A_G",
-      "variant_idx": 303,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
       "variant_id": "var_3328_C_T",
       "variant_idx": 304,
-      "cluster": 4,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3357_G_C",
-      "variant_idx": 313,
-      "cluster": 3,
+      "cluster": 2,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3380_G_A",
       "variant_idx": 318,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3394_T_C",
-      "variant_idx": 322,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3395_A_C",
-      "variant_idx": 323,
-      "cluster": 3,
+      "cluster": 1,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3419_A_G",
       "variant_idx": 331,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3427_G_A",
-      "variant_idx": 333,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3461_C_G",
-      "variant_idx": 339,
-      "cluster": 3,
+      "cluster": 1,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3472_T_C",
       "variant_idx": 341,
-      "cluster": 4,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3488_T_C",
-      "variant_idx": 345,
-      "cluster": 23,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3496_G_A",
-      "variant_idx": 348,
-      "cluster": 23,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3502_T_C",
-      "variant_idx": 351,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3508_A_G",
-      "variant_idx": 354,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3509_T_C",
-      "variant_idx": 355,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3553_C_T",
-      "variant_idx": 368,
-      "cluster": 3,
+      "cluster": 2,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3569_C_T",
       "variant_idx": 371,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3578_T_C",
-      "variant_idx": 374,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3582_C_T",
-      "variant_idx": 375,
-      "cluster": 3,
+      "cluster": 1,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3607_G_A",
       "variant_idx": 378,
-      "cluster": 4,
+      "cluster": 2,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3622_C_A",
       "variant_idx": 380,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3624_A_G",
-      "variant_idx": 381,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3643_G_A",
-      "variant_idx": 387,
-      "cluster": 3,
+      "cluster": 1,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3652_A_G",
       "variant_idx": 389,
-      "cluster": 4,
+      "cluster": 2,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3653_T_C",
       "variant_idx": 390,
-      "cluster": 3,
+      "cluster": 1,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3661_T_G",
       "variant_idx": 391,
-      "cluster": 4,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3670_G_A",
-      "variant_idx": 394,
-      "cluster": 23,
+      "cluster": 2,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3685_T_C",
       "variant_idx": 395,
-      "cluster": 4,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3701_C_T",
-      "variant_idx": 400,
-      "cluster": 3,
+      "cluster": 2,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3709_G_A",
       "variant_idx": 401,
-      "cluster": 4,
+      "cluster": 2,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3710_C_T",
       "variant_idx": 402,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3712_G_A",
-      "variant_idx": 403,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3713_T_C",
-      "variant_idx": 404,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3715_G_A",
-      "variant_idx": 405,
-      "cluster": 23,
+      "cluster": 1,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3734_A_G",
       "variant_idx": 409,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3749_T_C",
-      "variant_idx": 413,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3751_A_G",
-      "variant_idx": 414,
-      "cluster": 3,
+      "cluster": 1,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3764_C_T",
       "variant_idx": 416,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3775_A_T",
-      "variant_idx": 419,
-      "cluster": 3,
+      "cluster": 1,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3793_T_C",
       "variant_idx": 421,
-      "cluster": 4,
+      "cluster": 2,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3887_A_G",
       "variant_idx": 432,
-      "cluster": 4,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3907_G_A",
-      "variant_idx": 436,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3910_G_A",
-      "variant_idx": 437,
-      "cluster": 3,
+      "cluster": 2,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3937_T_C",
       "variant_idx": 444,
-      "cluster": 4,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3949_T_C",
-      "variant_idx": 448,
-      "cluster": 3,
+      "cluster": 2,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_3991_A_G",
       "variant_idx": 453,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_3995_A_G",
-      "variant_idx": 455,
-      "cluster": 3,
+      "cluster": 1,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_4055_T_C",
       "variant_idx": 464,
-      "cluster": 4,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_4082_T_C",
-      "variant_idx": 468,
-      "cluster": 3,
+      "cluster": 2,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_4094_C_T",
       "variant_idx": 471,
-      "cluster": 3,
+      "cluster": 1,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_4105_A_G",
       "variant_idx": 472,
-      "cluster": 4,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_4132_G_A",
-      "variant_idx": 477,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_4142_G_A",
-      "variant_idx": 482,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_4148_G_A",
-      "variant_idx": 483,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_4153_G_A",
-      "variant_idx": 484,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_4165_C_G",
-      "variant_idx": 488,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_4171_C_A",
-      "variant_idx": 490,
-      "cluster": 23,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_4180_A_G",
-      "variant_idx": 493,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_4181_A_G",
-      "variant_idx": 494,
-      "cluster": 3,
+      "cluster": 2,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_4193_T_C",
       "variant_idx": 495,
-      "cluster": 4,
+      "cluster": 2,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_4211_T_C",
       "variant_idx": 497,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_4238_T_C",
-      "variant_idx": 506,
-      "cluster": 3,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_4247_T_C",
-      "variant_idx": 509,
-      "cluster": 3,
+      "cluster": 1,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_4258_A_G",
       "variant_idx": 511,
-      "cluster": 4,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_7472_A_C",
-      "variant_idx": 1213,
-      "cluster": 5,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_7478_G_A",
-      "variant_idx": 1219,
-      "cluster": 5,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_7479_G_A",
-      "variant_idx": 1220,
-      "cluster": 5,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_7486_G_A",
-      "variant_idx": 1223,
-      "cluster": 5,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_7487_C_T",
-      "variant_idx": 1224,
-      "cluster": 5,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_7496_T_C",
-      "variant_idx": 1228,
-      "cluster": 5,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_7499_C_A",
-      "variant_idx": 1231,
-      "cluster": 5,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_7501_T_A",
-      "variant_idx": 1232,
-      "cluster": 5,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_7502_C_T",
-      "variant_idx": 1234,
-      "cluster": 5,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_7505_T_C",
-      "variant_idx": 1235,
-      "cluster": 5,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8529_G_A",
-      "variant_idx": 1524,
-      "cluster": 6,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8538_T_C",
-      "variant_idx": 1530,
-      "cluster": 6,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8540_T_C",
-      "variant_idx": 1531,
-      "cluster": 6,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8550_A_G",
-      "variant_idx": 1537,
-      "cluster": 6,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8553_C_T",
-      "variant_idx": 1540,
-      "cluster": 6,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8565_A_G",
-      "variant_idx": 1549,
-      "cluster": 6,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8576_T_C",
-      "variant_idx": 1557,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8591_T_C",
-      "variant_idx": 1564,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8593_A_G",
-      "variant_idx": 1565,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8599_C_A",
-      "variant_idx": 1568,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8603_T_G",
-      "variant_idx": 1570,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8605_C_T",
-      "variant_idx": 1572,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8612_T_C",
-      "variant_idx": 1578,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8615_T_C",
-      "variant_idx": 1579,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8623_A_C",
-      "variant_idx": 1585,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8623_A_T",
-      "variant_idx": 1587,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8641_A_G",
-      "variant_idx": 1595,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8642_A_C",
-      "variant_idx": 1597,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8651_T_C",
-      "variant_idx": 1599,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8669_G_C",
-      "variant_idx": 1607,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8686_T_A",
-      "variant_idx": 1614,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8686_T_C",
-      "variant_idx": 1615,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8697_G_T",
-      "variant_idx": 1618,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8699_T_C",
-      "variant_idx": 1619,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8700_A_T",
-      "variant_idx": 1620,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8704_A_G",
-      "variant_idx": 1623,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8714_C_T",
-      "variant_idx": 1628,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8719_G_A",
-      "variant_idx": 1631,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8720_G_A",
-      "variant_idx": 1632,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8720_G_C",
-      "variant_idx": 1633,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8722_C_T",
-      "variant_idx": 1634,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8728_T_C",
-      "variant_idx": 1638,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8731_T_A",
-      "variant_idx": 1639,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8735_T_C",
-      "variant_idx": 1640,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8737_A_G",
-      "variant_idx": 1641,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8744_T_C",
-      "variant_idx": 1643,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8746_T_C",
-      "variant_idx": 1644,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8761_A_C",
-      "variant_idx": 1648,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8782_G_A",
-      "variant_idx": 1657,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8783_G_A",
-      "variant_idx": 1658,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8785_C_G",
-      "variant_idx": 1659,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8785_C_T",
-      "variant_idx": 1660,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8789_T_C",
-      "variant_idx": 1661,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8800_T_C",
-      "variant_idx": 1666,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8800_T_G",
-      "variant_idx": 1667,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8803_A_T",
-      "variant_idx": 1669,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8812_A_T",
-      "variant_idx": 1673,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8816_A_G",
-      "variant_idx": 1674,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8821_T_C",
-      "variant_idx": 1676,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8824_A_G",
-      "variant_idx": 1679,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8825_T_C",
-      "variant_idx": 1680,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8839_G_C",
-      "variant_idx": 1685,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8840_C_T",
-      "variant_idx": 1686,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8844_C_A",
-      "variant_idx": 1690,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8868_T_A",
-      "variant_idx": 1702,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8873_G_C",
-      "variant_idx": 1705,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8879_G_A",
-      "variant_idx": 1708,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8884_A_G",
-      "variant_idx": 1711,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8906_A_C",
-      "variant_idx": 1722,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8915_C_T",
-      "variant_idx": 1726,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8921_G_A",
-      "variant_idx": 1728,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8933_C_T",
-      "variant_idx": 1732,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8935_C_T",
-      "variant_idx": 1733,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8936_T_A",
-      "variant_idx": 1734,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8936_T_C",
-      "variant_idx": 1735,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8941_C_T",
-      "variant_idx": 1738,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8953_A_G",
-      "variant_idx": 1744,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8954_T_C",
-      "variant_idx": 1745,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8959_G_A",
-      "variant_idx": 1746,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8967_C_A",
-      "variant_idx": 1749,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8968_A_C",
-      "variant_idx": 1750,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8972_T_C",
-      "variant_idx": 1754,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8980_C_A",
-      "variant_idx": 1758,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_8989_G_C",
-      "variant_idx": 1763,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9005_T_C",
-      "variant_idx": 1770,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9014_A_G",
-      "variant_idx": 1776,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9019_A_G",
-      "variant_idx": 1779,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9025_G_A",
-      "variant_idx": 1780,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9026_G_A",
-      "variant_idx": 1781,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9028_C_T",
-      "variant_idx": 1782,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9029_A_G",
-      "variant_idx": 1783,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9032_T_C",
-      "variant_idx": 1784,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9038_T_C",
-      "variant_idx": 1786,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9047_T_C",
-      "variant_idx": 1789,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9049_G_A",
-      "variant_idx": 1790,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9058_A_C",
-      "variant_idx": 1795,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9070_T_C",
-      "variant_idx": 1800,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9082_C_T",
-      "variant_idx": 1808,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9085_C_A",
-      "variant_idx": 1810,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9086_C_T",
-      "variant_idx": 1811,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9122_T_G",
-      "variant_idx": 1830,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9125_C_T",
-      "variant_idx": 1832,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9133_G_A",
-      "variant_idx": 1838,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9134_A_G",
-      "variant_idx": 1839,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9136_A_G",
-      "variant_idx": 1840,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9140_C_T",
-      "variant_idx": 1844,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9152_T_C",
-      "variant_idx": 1848,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9160_T_C",
-      "variant_idx": 1853,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9166_T_C",
-      "variant_idx": 1855,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9167_T_C",
-      "variant_idx": 1856,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9169_A_G",
-      "variant_idx": 1857,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9170_C_T",
-      "variant_idx": 1858,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9179_T_C",
-      "variant_idx": 1861,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9188_A_G",
-      "variant_idx": 1866,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9194_A_G",
-      "variant_idx": 1868,
-      "cluster": 7,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_9205_T_C",
-      "variant_idx": 1872,
-      "cluster": 7,
+      "cluster": 2,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_10110_A_G",
       "variant_idx": 2091,
-      "cluster": 8,
+      "cluster": 3,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_10134_C_A",
       "variant_idx": 2094,
-      "cluster": 8,
+      "cluster": 3,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_10158_T_A",
       "variant_idx": 2098,
-      "cluster": 8,
+      "cluster": 3,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_10225_T_C",
       "variant_idx": 2112,
-      "cluster": 8,
+      "cluster": 3,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_10236_A_G",
       "variant_idx": 2113,
-      "cluster": 8,
+      "cluster": 3,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_10266_G_A",
       "variant_idx": 2117,
-      "cluster": 8,
+      "cluster": 3,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_10290_G_A",
       "variant_idx": 2119,
-      "cluster": 8,
+      "cluster": 3,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_10785_T_C",
       "variant_idx": 2207,
-      "cluster": 9,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_10857_T_C",
       "variant_idx": 2211,
-      "cluster": 9,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11004_G_A",
       "variant_idx": 2229,
-      "cluster": 9,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11013_C_A",
       "variant_idx": 2230,
-      "cluster": 9,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11069_A_G",
       "variant_idx": 2239,
-      "cluster": 9,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11111_T_C",
       "variant_idx": 2244,
-      "cluster": 9,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11120_T_C",
       "variant_idx": 2245,
-      "cluster": 9,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11139_T_C",
       "variant_idx": 2247,
-      "cluster": 9,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11223_T_C",
       "variant_idx": 2257,
-      "cluster": 9,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11232_T_C",
       "variant_idx": 2258,
-      "cluster": 9,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11289_T_C",
       "variant_idx": 2266,
-      "cluster": 9,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11360_A_G",
       "variant_idx": 2272,
-      "cluster": 9,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11393_C_T",
       "variant_idx": 2278,
-      "cluster": 9,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11443_A_C",
       "variant_idx": 2281,
-      "cluster": 9,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11498_A_G",
       "variant_idx": 2286,
-      "cluster": 9,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11577_G_A",
       "variant_idx": 2293,
-      "cluster": 9,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11590_A_G",
       "variant_idx": 2296,
-      "cluster": 9,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11615_A_G",
       "variant_idx": 2297,
-      "cluster": 9,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11634_G_A",
       "variant_idx": 2299,
-      "cluster": 9,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11733_T_C",
       "variant_idx": 2307,
-      "cluster": 9,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11792_T_G",
       "variant_idx": 2311,
-      "cluster": 9,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11825_G_A",
       "variant_idx": 2315,
-      "cluster": 9,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11896_C_G",
       "variant_idx": 2318,
-      "cluster": 9,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11906_G_A",
       "variant_idx": 2320,
-      "cluster": 9,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11913_C_T",
       "variant_idx": 2321,
-      "cluster": 9,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_11978_T_A",
       "variant_idx": 2334,
-      "cluster": 9,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_12054_G_A",
       "variant_idx": 2355,
-      "cluster": 9,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_12117_T_C",
       "variant_idx": 2362,
-      "cluster": 9,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12144_A_G",
-      "variant_idx": 2372,
-      "cluster": 10,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12146_A_G",
-      "variant_idx": 2373,
-      "cluster": 10,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12148_T_C",
-      "variant_idx": 2375,
-      "cluster": 10,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12150_T_C",
-      "variant_idx": 2376,
-      "cluster": 10,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12163_A_G",
-      "variant_idx": 2382,
-      "cluster": 10,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12173_T_A",
-      "variant_idx": 2390,
-      "cluster": 10,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12176_G_A",
-      "variant_idx": 2392,
-      "cluster": 10,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12177_A_G",
-      "variant_idx": 2393,
-      "cluster": 10,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12183_G_A",
-      "variant_idx": 2397,
-      "cluster": 10,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12184_A_G",
-      "variant_idx": 2398,
-      "cluster": 10,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12185_G_A",
-      "variant_idx": 2399,
-      "cluster": 10,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12187_C_A",
-      "variant_idx": 2400,
-      "cluster": 10,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12202_T_C",
-      "variant_idx": 2411,
-      "cluster": 10,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12204_A_C",
-      "variant_idx": 2412,
-      "cluster": 10,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12205_C_T",
-      "variant_idx": 2413,
-      "cluster": 10,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12271_T_C",
-      "variant_idx": 2444,
-      "cluster": 11,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12317_T_C",
-      "variant_idx": 2468,
-      "cluster": 11,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12318_G_A",
-      "variant_idx": 2469,
-      "cluster": 11,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12320_A_G",
-      "variant_idx": 2470,
-      "cluster": 11,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12344_T_C",
-      "variant_idx": 2477,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12344_T_G",
-      "variant_idx": 2478,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12349_A_G",
-      "variant_idx": 2480,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12382_A_G",
-      "variant_idx": 2489,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12383_T_C",
-      "variant_idx": 2490,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12426_C_A",
-      "variant_idx": 2504,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12432_C_T",
-      "variant_idx": 2505,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12457_G_A",
-      "variant_idx": 2512,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12458_C_T",
-      "variant_idx": 2513,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12479_T_C",
-      "variant_idx": 2515,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12481_T_C",
-      "variant_idx": 2517,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12493_A_G",
-      "variant_idx": 2519,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12501_G_C",
-      "variant_idx": 2522,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12544_A_G",
-      "variant_idx": 2529,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12545_C_T",
-      "variant_idx": 2530,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12560_A_G",
-      "variant_idx": 2533,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12561_G_C",
-      "variant_idx": 2534,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12601_T_C",
-      "variant_idx": 2538,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12613_G_T",
-      "variant_idx": 2540,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12713_T_C",
-      "variant_idx": 2554,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12775_G_A",
-      "variant_idx": 2560,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12799_A_G",
-      "variant_idx": 2564,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12814_G_A",
-      "variant_idx": 2567,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12836_C_T",
-      "variant_idx": 2571,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12842_T_C",
-      "variant_idx": 2572,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12865_A_G",
-      "variant_idx": 2577,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12941_C_T",
-      "variant_idx": 2591,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_12997_G_A",
-      "variant_idx": 2599,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13045_A_C",
-      "variant_idx": 2603,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13064_T_C",
-      "variant_idx": 2608,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13097_T_C",
-      "variant_idx": 2613,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13099_G_A",
-      "variant_idx": 2614,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13147_C_T",
-      "variant_idx": 2623,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13154_T_C",
-      "variant_idx": 2626,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13159_A_G",
-      "variant_idx": 2627,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13162_C_A",
-      "variant_idx": 2628,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13204_G_C",
-      "variant_idx": 2632,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13246_T_C",
-      "variant_idx": 2637,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13289_G_A",
-      "variant_idx": 2645,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13328_C_A",
-      "variant_idx": 2648,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13369_T_C",
-      "variant_idx": 2653,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13376_T_C",
-      "variant_idx": 2655,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13391_A_G",
-      "variant_idx": 2659,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13406_G_A",
-      "variant_idx": 2662,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13436_C_A",
-      "variant_idx": 2665,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13438_C_A",
-      "variant_idx": 2666,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13468_C_A",
-      "variant_idx": 2670,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13471_G_A",
-      "variant_idx": 2671,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13478_C_T",
-      "variant_idx": 2673,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13484_T_C",
-      "variant_idx": 2675,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13522_A_C",
-      "variant_idx": 2684,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13522_A_G",
-      "variant_idx": 2685,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13524_C_A",
-      "variant_idx": 2686,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13552_G_A",
-      "variant_idx": 2691,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13568_T_C",
-      "variant_idx": 2693,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13583_C_T",
-      "variant_idx": 2697,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13612_A_T",
-      "variant_idx": 2701,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13616_T_C",
-      "variant_idx": 2703,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13651_A_C",
-      "variant_idx": 2710,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13651_A_T",
-      "variant_idx": 2712,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13664_T_C",
-      "variant_idx": 2714,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13712_C_T",
-      "variant_idx": 2721,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13713_C_A",
-      "variant_idx": 2722,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13726_G_A",
-      "variant_idx": 2724,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13760_C_T",
-      "variant_idx": 2732,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13835_C_T",
-      "variant_idx": 2752,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13885_C_A",
-      "variant_idx": 2760,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13912_C_T",
-      "variant_idx": 2765,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13913_T_C",
-      "variant_idx": 2766,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13926_T_C",
-      "variant_idx": 2770,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13946_T_C",
-      "variant_idx": 2776,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_13974_A_T",
-      "variant_idx": 2782,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14021_T_C",
-      "variant_idx": 2788,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14053_A_C",
-      "variant_idx": 2799,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14112_C_A",
-      "variant_idx": 2809,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14113_T_C",
-      "variant_idx": 2810,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14138_T_C",
-      "variant_idx": 2816,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14140_A_G",
-      "variant_idx": 2817,
-      "cluster": 12,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14154_T_G",
-      "variant_idx": 2824,
-      "cluster": 13,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14180_T_G",
-      "variant_idx": 2831,
-      "cluster": 13,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14210_A_G",
-      "variant_idx": 2839,
-      "cluster": 13,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14231_T_C",
-      "variant_idx": 2844,
-      "cluster": 13,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14234_T_C",
-      "variant_idx": 2846,
-      "cluster": 13,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14276_C_T",
-      "variant_idx": 2854,
-      "cluster": 13,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14279_G_A",
-      "variant_idx": 2855,
-      "cluster": 13,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14301_T_C",
-      "variant_idx": 2860,
-      "cluster": 13,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14307_T_C",
-      "variant_idx": 2861,
-      "cluster": 13,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14328_C_T",
-      "variant_idx": 2867,
-      "cluster": 13,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14339_A_G",
-      "variant_idx": 2869,
-      "cluster": 13,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14375_A_C",
-      "variant_idx": 2878,
-      "cluster": 13,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14423_G_A",
-      "variant_idx": 2885,
-      "cluster": 13,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14444_T_C",
-      "variant_idx": 2891,
-      "cluster": 13,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14477_A_G",
-      "variant_idx": 2900,
-      "cluster": 13,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14498_T_C",
-      "variant_idx": 2907,
-      "cluster": 13,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14563_C_T",
-      "variant_idx": 2920,
-      "cluster": 13,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14576_A_G",
-      "variant_idx": 2926,
-      "cluster": 13,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14598_T_C",
-      "variant_idx": 2933,
-      "cluster": 13,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14601_G_A",
-      "variant_idx": 2935,
-      "cluster": 13,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14615_G_A",
-      "variant_idx": 2936,
-      "cluster": 13,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14664_C_T",
-      "variant_idx": 2944,
-      "cluster": 13,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14667_A_G",
-      "variant_idx": 2945,
-      "cluster": 13,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14670_T_C",
-      "variant_idx": 2947,
-      "cluster": 13,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14760_G_A",
-      "variant_idx": 2983,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14765_A_T",
-      "variant_idx": 2984,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14768_A_G",
-      "variant_idx": 2986,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14771_C_A",
-      "variant_idx": 2988,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14778_T_C",
-      "variant_idx": 2989,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14786_A_G",
-      "variant_idx": 2992,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14792_C_T",
-      "variant_idx": 2995,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14795_T_C",
-      "variant_idx": 2997,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14804_G_A",
-      "variant_idx": 3000,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14813_A_T",
-      "variant_idx": 3002,
-      "cluster": 15,
+      "cluster": 4,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_14825_A_G",
       "variant_idx": 3003,
-      "cluster": 14,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14826_T_C",
-      "variant_idx": 3004,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14831_G_C",
-      "variant_idx": 3006,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14838_G_A",
-      "variant_idx": 3008,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14846_G_A",
-      "variant_idx": 3010,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14854_C_T",
-      "variant_idx": 3012,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14858_G_A",
-      "variant_idx": 3013,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14873_C_T",
-      "variant_idx": 3020,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14888_G_A",
-      "variant_idx": 3025,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14895_T_C",
-      "variant_idx": 3028,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14900_G_A",
-      "variant_idx": 3029,
-      "cluster": 15,
+      "cluster": 5,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_14921_G_A",
       "variant_idx": 3032,
-      "cluster": 14,
+      "cluster": 5,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_14945_G_A",
       "variant_idx": 3036,
-      "cluster": 14,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14952_T_C",
-      "variant_idx": 3038,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14958_G_A",
-      "variant_idx": 3040,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14960_G_A",
-      "variant_idx": 3041,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14963_G_A",
-      "variant_idx": 3042,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14969_T_C",
-      "variant_idx": 3044,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14973_G_A",
-      "variant_idx": 3046,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14974_C_G",
-      "variant_idx": 3047,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14976_G_A",
-      "variant_idx": 3048,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14980_C_A",
-      "variant_idx": 3051,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14982_T_C",
-      "variant_idx": 3052,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_14985_G_A",
-      "variant_idx": 3053,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15003_G_A",
-      "variant_idx": 3058,
-      "cluster": 15,
+      "cluster": 5,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_15011_A_G",
       "variant_idx": 3059,
-      "cluster": 14,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15016_C_A",
-      "variant_idx": 3061,
-      "cluster": 15,
+      "cluster": 5,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_15033_T_C",
       "variant_idx": 3064,
-      "cluster": 14,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15045_G_A",
-      "variant_idx": 3067,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15048_G_C",
-      "variant_idx": 3069,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15059_G_A",
-      "variant_idx": 3072,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15060_G_A",
-      "variant_idx": 3073,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15062_T_C",
-      "variant_idx": 3075,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15078_A_G",
-      "variant_idx": 3079,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15096_T_C",
-      "variant_idx": 3084,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15100_C_A",
-      "variant_idx": 3087,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15117_T_C",
-      "variant_idx": 3090,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15127_C_T",
-      "variant_idx": 3093,
-      "cluster": 15,
+      "cluster": 5,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_15138_A_G",
       "variant_idx": 3094,
-      "cluster": 14,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15141_T_C",
-      "variant_idx": 3095,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15152_G_A",
-      "variant_idx": 3098,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15153_G_A",
-      "variant_idx": 3099,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15159_T_C",
-      "variant_idx": 3101,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15170_G_A",
-      "variant_idx": 3104,
-      "cluster": 15,
+      "cluster": 5,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_15191_T_A",
       "variant_idx": 3105,
-      "cluster": 14,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15192_T_G",
-      "variant_idx": 3107,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15197_T_C",
-      "variant_idx": 3108,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15200_G_A",
-      "variant_idx": 3109,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15228_T_C",
-      "variant_idx": 3123,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15233_T_C",
-      "variant_idx": 3124,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15233_T_G",
-      "variant_idx": 3125,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15237_T_G",
-      "variant_idx": 3129,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15238_C_A",
-      "variant_idx": 3131,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15243_G_A",
-      "variant_idx": 3133,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15245_G_A",
-      "variant_idx": 3134,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15246_G_A",
-      "variant_idx": 3135,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15261_G_C",
-      "variant_idx": 3140,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15266_A_G",
-      "variant_idx": 3143,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15273_C_A",
-      "variant_idx": 3145,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15288_T_C",
-      "variant_idx": 3147,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15294_T_C",
-      "variant_idx": 3149,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15309_T_C",
-      "variant_idx": 3152,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15327_C_T",
-      "variant_idx": 3161,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15349_C_A",
-      "variant_idx": 3168,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15357_G_A",
-      "variant_idx": 3172,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15404_T_C",
-      "variant_idx": 3184,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15413_T_C",
-      "variant_idx": 3186,
-      "cluster": 15,
+      "cluster": 5,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_15428_G_A",
       "variant_idx": 3188,
-      "cluster": 14,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15437_G_A",
-      "variant_idx": 3192,
-      "cluster": 15,
+      "cluster": 5,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_15446_C_T",
       "variant_idx": 3193,
-      "cluster": 14,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15453_T_C",
-      "variant_idx": 3197,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15462_T_C",
-      "variant_idx": 3200,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15465_T_C",
-      "variant_idx": 3201,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15467_A_G",
-      "variant_idx": 3202,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15468_C_T",
-      "variant_idx": 3203,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15483_C_T",
-      "variant_idx": 3206,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15488_G_A",
-      "variant_idx": 3209,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15498_G_A",
-      "variant_idx": 3212,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15500_G_A",
-      "variant_idx": 3213,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15501_A_G",
-      "variant_idx": 3214,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15519_T_A",
-      "variant_idx": 3218,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15522_C_G",
-      "variant_idx": 3221,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15525_A_G",
-      "variant_idx": 3223,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15531_T_C",
-      "variant_idx": 3225,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15557_G_A",
-      "variant_idx": 3230,
-      "cluster": 15,
+      "cluster": 5,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_15567_T_C",
       "variant_idx": 3231,
-      "cluster": 14,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15575_G_A",
-      "variant_idx": 3233,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15579_A_G",
-      "variant_idx": 3234,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15581_A_G",
-      "variant_idx": 3235,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15584_A_G",
-      "variant_idx": 3236,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15612_G_A",
-      "variant_idx": 3239,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15614_G_A",
-      "variant_idx": 3240,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15615_G_A",
-      "variant_idx": 3241,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15617_G_C",
-      "variant_idx": 3243,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15623_G_A",
-      "variant_idx": 3245,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15638_A_G",
-      "variant_idx": 3248,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15686_A_G",
-      "variant_idx": 3268,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15690_T_C",
-      "variant_idx": 3269,
-      "cluster": 15,
+      "cluster": 5,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_15708_G_C",
       "variant_idx": 3274,
-      "cluster": 14,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15737_G_A",
-      "variant_idx": 3281,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15740_C_T",
-      "variant_idx": 3282,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15743_C_T",
-      "variant_idx": 3283,
-      "cluster": 15,
+      "cluster": 5,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_15770_C_T",
       "variant_idx": 3289,
-      "cluster": 14,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15785_T_C",
-      "variant_idx": 3297,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15793_C_A",
-      "variant_idx": 3300,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15831_T_C",
-      "variant_idx": 3309,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15834_T_C",
-      "variant_idx": 3311,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15843_T_C",
-      "variant_idx": 3312,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15848_A_G",
-      "variant_idx": 3313,
-      "cluster": 15,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15852_T_G",
-      "variant_idx": 3316,
-      "cluster": 15,
+      "cluster": 5,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_15873_T_C",
       "variant_idx": 3320,
-      "cluster": 14,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15874_A_T",
-      "variant_idx": 3321,
-      "cluster": 15,
+      "cluster": 5,
       "in_pathogenic_cluster": true
     },
     {
       "variant_id": "var_15882_G_A",
       "variant_idx": 3322,
-      "cluster": 14,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15897_G_A",
-      "variant_idx": 3335,
-      "cluster": 16,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15921_T_C",
-      "variant_idx": 3353,
-      "cluster": 16,
-      "in_pathogenic_cluster": true
-    },
-    {
-      "variant_id": "var_15932_T_G",
-      "variant_idx": 3364,
-      "cluster": 16,
+      "cluster": 5,
       "in_pathogenic_cluster": true
     }
   ],
@@ -2903,8 +467,8 @@
     "algorithm": "DBSCAN",
     "eps": 0.4,
     "min_samples": 5,
-    "n_clusters": 78,
-    "n_noise": 577,
-    "silhouette_score": 0.5770105719566345
+    "n_clusters": 43,
+    "n_noise": 2046,
+    "silhouette_score": 0.9750059843063354
   }
 }

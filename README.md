@@ -9,7 +9,7 @@ A Graph ML pipeline that builds a heterogeneous Knowledge Graph from mitochondri
 MitoGraph integrates three data sources - **RefSeq GFF3** (gene annotations), **ClinVar** (variant classifications), and **MITOMAP** (disease associations, conservation scores) - into a single Knowledge Graph. A Graph Neural Network (GATv2Conv-based heterogeneous encoder with attention) is trained on known pathogenic variant-phenotype associations, then used to predict potential disease links for VUS.
 
 ### Key Results
-- **Test AUPRC: 0.846** | **Test AUROC: 0.801** | **Silhouette: 0.590**
+- **Test AUPRC: 0.830** | **Test AUROC: 0.789** | **Silhouette: 0.975**
 - 1,228 VUS scored against 808 disease phenotypes
 - Model config: GATv2Conv with 64 dimensions, 8 attention heads, LR 0.005
 
@@ -17,17 +17,17 @@ MitoGraph integrates three data sources - **RefSeq GFF3** (gene annotations), **
 
 The results are served through an interactive Next.js dashboard deployed on Vercel.
 
-**Stats overview + UMAP latent space** - 2D projection of GATv2Conv variant embeddings colored by pathogenicity class. Flagged VUS (★) cluster with known pathogenic variants.
+**Feature Importance (Biological Grounding)** - Extracted linear projection weights from the model's input encoder prove that MitoGraph focuses on biologically relevant features (PhyloP, mutation type) without relying on data leakage.
 
-![Dashboard overview showing stat cards and UMAP scatter plot](docs/dashboard_overview.png)
+![Feature Importance Model Diagnostics](docs/feature_importance.png)
 
 **Network Graph (Structural Interpretability)** - Force-directed layout of the knowledge graph hierarchy: Complexes → Genes → Variants → Phenotypes. Nodes are draggable, clickable, and edge thickness represents GATv2Conv attention weight ($\alpha$).
 
 ![Interactive network graph with gene labels and complex hierarchy](docs/network_graph.png)
 
-**Feature Importance (Biological Grounding)** - Extracted linear projection weights from the model's input encoder prove that MitoGraph focuses on biologically relevant features (PhyloP, mutation type) without relying on data leakage.
+**Stats overview + UMAP latent space** - 2D projection of GATv2Conv variant embeddings colored by pathogenicity class. Flagged VUS (★) cluster with pathogenic variants. Extracted explicitly from the Graph structure's deepest layer.
 
-![Feature Importance Model Diagnostics](docs/feature_importance.png)
+![Dashboard overview showing stat cards and UMAP scatter plot](docs/dashboard_overview.png)
 
 **Dashboard source code:** [Shreyan-A0I/Mitomap-app](https://github.com/Shreyan-A0I/Mitomap-app)
 
