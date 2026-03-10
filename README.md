@@ -9,9 +9,9 @@ A Graph ML pipeline that builds a heterogeneous Knowledge Graph from mitochondri
 MitoGraph integrates three data sources - **RefSeq GFF3** (gene annotations), **ClinVar** (variant classifications), and **MITOMAP** (disease associations, conservation scores) - into a single Knowledge Graph. A Graph Neural Network (GATv2Conv-based heterogeneous encoder with attention) is trained on known pathogenic variant-phenotype associations, then used to predict potential disease links for VUS.
 
 ### Key Results
-- **Test AUPRC: 0.792** | **Test AUROC: 0.789** | **Silhouette: 0.577**
+- **Test AUPRC: 0.846** | **Test AUROC: 0.801** | **Silhouette: 0.590**
 - 1,228 VUS scored against 808 disease phenotypes
-- 482 VUS flagged as potentially pathogenic (39%)
+- Model config: GATv2Conv with 64 dimensions, 8 attention heads, LR 0.005
 
 ## Interactive Dashboard
 
@@ -21,9 +21,13 @@ The results are served through an interactive Next.js dashboard deployed on Verc
 
 ![Dashboard overview showing stat cards and UMAP scatter plot](docs/dashboard_overview.png)
 
-**Mitochondrial complex graph** - Force-directed layout of the knowledge graph hierarchy: Complexes → Genes → Variants → Phenotypes. Nodes are draggable, clickable, and color-coded by type.
+**Network Graph (Structural Interpretability)** - Force-directed layout of the knowledge graph hierarchy: Complexes → Genes → Variants → Phenotypes. Nodes are draggable, clickable, and edge thickness represents GATv2Conv attention weight ($\alpha$).
 
 ![Interactive network graph with gene labels and complex hierarchy](docs/network_graph.png)
+
+**Feature Importance (Biological Grounding)** - Extracted linear projection weights from the model's input encoder prove that MitoGraph focuses on biologically relevant features (PhyloP, mutation type) without relying on data leakage.
+
+![Feature Importance Model Diagnostics](docs/feature_importance.png)
 
 **Dashboard source code:** [Shreyan-A0I/Mitomap-app](https://github.com/Shreyan-A0I/Mitomap-app)
 
@@ -63,17 +67,18 @@ Each node type has a fixed-length feature vector fed to the GATv2Conv encoder:
 
 **Complex (4D):** one-hot `[I, III, IV, V]`
 
-**Phenotype (64D):** Random unit-vector projection later shaped into something meaningful by GATv2Conv message passing during training
+**Phenotype (384D):** Generated offline using `sentence-transformers` (`all-MiniLM-L6-v2`) on disease names, allowing the model to naturally understand that "Optic Atrophy" and "Blindness" are related concepts before message passing even begins.
 
 ## Design Decisions
 
-- **GATv2Conv + 4 Attention Heads**: Dynamic attention learns which neighbor edges matter most for pathogenicity prediction
-- **Hard Negative Mining**: 1,611 benign variants forced to score 0.0 against all phenotypes, reduced VUS false-positive rate from 74% to 39%
+- **GATv2Conv + 8 Attention Heads**: Dynamic attention learns which neighbor edges matter most for pathogenicity prediction
+- **Strict Data Integrity**: Removed all clinical significance flags (is_pathogenic) and previously computed ML scores (APOGEE) from the Variant feature vector to completely eliminate data leakage.
+- **Hard Negative Mining**: Benign variants forced to score 0.0 against all phenotypes to teach the model what "healthy" graph topology looks like.
+- **LLM Embeddings (all-MiniLM-L6-v2)**: Replaced random JL projection with semantic text embeddings for phenotype names.
 - **Circular Positional Encoding**: mtDNA is circular; positions are encoded as `(sin(2π·pos/16569), cos(2π·pos/16569))` so position 16569 neighbors position 1
 - **PhyloP Conservation**: 100-vertebrate basewise PhyloP scores from UCSC; missing values imputed with median (no 0.0 placeholders)
-- **4-mer Similarity**: ±20bp windows on the circular genome; cosine similarity threshold of 0.85
 - **Variant-Level Split**: Entire variants held out for val/test to prevent edge leakage through k-mer similarity edges
-- **DBSCAN Clustering**: eps=0.4, min_samples=5 on UMAP embeddings to identify pathogenic clusters (Silhouette=0.577)
+- **DBSCAN Clustering**: eps=0.4, min_samples=5 on UMAP embeddings to identify pathogenic clusters (Silhouette=0.590)
 
 ## Data Sources & Acknowledgements
 

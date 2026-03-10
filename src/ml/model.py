@@ -26,7 +26,7 @@ class MitoGraphEncoder(nn.Module):
 
     def __init__(self, metadata, hidden_dim=64, out_dim=32,
                  variant_in_dim=10, gene_in_dim=3, complex_in_dim=4,
-                 phenotype_in_dim=64, heads=4):
+                 phenotype_in_dim=384, heads=4):
         """
         Args:
             metadata: tuple (node_types, edge_types) from HeteroData.metadata()

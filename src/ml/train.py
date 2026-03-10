@@ -227,7 +227,14 @@ def compute_metrics(model, z_dict, edge_index, neg_edge_index):
     return auprc, auroc
 
 
+import argparse
+
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--lr', type=float, default=0.005)
+    parser.add_argument('--hidden_dim', type=int, default=64)
+    parser.add_argument('--heads', type=int, default=4)
+    args = parser.parse_args()
     script_dir = os.path.dirname(os.path.abspath(__file__))
     project_dir = os.path.dirname(os.path.dirname(script_dir))
     intermediate_dir = os.path.join(project_dir, 'data', 'intermediate')
@@ -261,16 +268,16 @@ def main():
 
     model = MitoGraphLinkPredictor(
         metadata=model_metadata,
-        hidden_dim=64,
+        hidden_dim=args.hidden_dim,
         out_dim=32,
         variant_in_dim=hetero_data['variant'].x.shape[1],
         gene_in_dim=hetero_data['gene'].x.shape[1],
         complex_in_dim=hetero_data['complex'].x.shape[1],
         phenotype_in_dim=pheno_in_dim,
-        heads=4,
+        heads=args.heads,
     )
 
-    optimizer = torch.optim.Adam(model.parameters(), lr=0.005, weight_decay=1e-5)
+    optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, weight_decay=1e-5)
 
     # --- Training ---
     n_epochs = 200
@@ -280,7 +287,7 @@ def main():
     history = []
 
     print(f"\nTraining for up to {n_epochs} epochs (patience={patience})...")
-    print(f"  Using: GATv2Conv (4 heads) + Hard Negative Mining")
+    print(f"  Using: GATv2Conv ({args.heads} heads, dim={args.hidden_dim}, lr={args.lr}) + Hard Negative Mining")
     print(f"{'Epoch':>5} | {'Loss':>8} | {'Train AUPRC':>11} | {'Val AUPRC':>10} | {'Val AUROC':>10}")
     print('-' * 60)
 
@@ -407,8 +414,9 @@ def main():
         },
         'model_config': {
             'architecture': 'GATv2Conv',
-            'attention_heads': 4,
-            'hidden_dim': 64,
+            'attention_heads': args.heads,
+            'hidden_dim': args.hidden_dim,
+            'lr': args.lr,
             'out_dim': 32,
             'hard_negative_mining': True,
         }

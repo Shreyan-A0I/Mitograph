@@ -58,18 +58,55 @@ def main():
     checkpoint_path = os.path.join(results_dir, 'model_checkpoint.pt')
     checkpoint = torch.load(checkpoint_path, weights_only=False)
 
+    # Read model config
+    metrics_path = os.path.join(results_dir, 'training_metrics.json')
+    with open(metrics_path, 'r') as f:
+        metrics = json.load(f)
+    config = metrics.get('model_config', {})
+    hidden_dim = config.get('hidden_dim', 64)
+    heads = config.get('attention_heads', 4)
+
     pheno_in_dim = data['phenotype'].x.shape[1]
     model = MitoGraphLinkPredictor(
         metadata=data.metadata(),
-        hidden_dim=64, out_dim=32,
+        hidden_dim=hidden_dim, out_dim=32,
         variant_in_dim=data['variant'].x.shape[1],
         gene_in_dim=data['gene'].x.shape[1],
         complex_in_dim=data['complex'].x.shape[1],
         phenotype_in_dim=pheno_in_dim,
-        heads=4,
+        heads=heads,
     )
     model.load_state_dict(checkpoint['model_state_dict'])
     model.eval()
+
+    # ================================================================
+    # FEATURE IMPORTANCE EXTRACTION
+    # ================================================================
+    print("Extracting feature linear projection weights...")
+    weights = model.encoder.input_proj['variant'].weight.detach().abs().mean(dim=0).numpy()
+    total_weight = weights.sum()
+    pcts = [(float(w) / float(total_weight)) * 100 for w in weights]
+    
+    # 14D pure biological features
+    feature_names = [
+        "PhyloP (Conservation)",
+        "Position X (sin)",
+        "Position Y (cos)",
+        "Is Transition",
+        "Is Transversion",
+        "Is Indel",
+        "Ref: A", "Ref: C", "Ref: G", "Ref: T",
+        "Alt: A", "Alt: C", "Alt: G", "Alt: T"
+    ]
+    
+    importance_data = [{"feature": name, "importance": pct} for name, pct in zip(feature_names, pcts)]
+    # Sort descending
+    importance_data.sort(key=lambda x: x["importance"], reverse=True)
+    
+    feat_out_path = os.path.join(export_dir, 'feature_importance.json')
+    with open(feat_out_path, 'w') as f:
+        json.dump(importance_data, f, indent=2)
+    print(f"Exported feature importance to {feat_out_path}")
 
     x_dict = {nt: data[nt].x for nt in data.node_types}
     edge_index_dict = {et: data[et].edge_index for et in data.edge_types}
