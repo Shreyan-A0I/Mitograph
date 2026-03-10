@@ -6,7 +6,7 @@ A Graph ML pipeline that builds a heterogeneous Knowledge Graph from mitochondri
 
 ## Overview
 
-MitoGraph integrates three data sources - **RefSeq GFF3** (gene annotations), **ClinVar** (variant classifications), and **MITOMAP** (disease associations, conservation scores) - into a single Knowledge Graph. A Graph Neural Network (GATv2Conv-based heterogeneous encoder with attention) is trained on known pathogenic variant-phenotype associations, then used to predict potential disease links for VUS.
+MitoGraph integrates three data sources: **RefSeq GFF3** (gene annotations), **ClinVar** (variant classifications), and **MITOMAP** (disease associations, conservation scores) into a single Knowledge Graph. A Graph Neural Network (GATv2Conv-based heterogeneous encoder with attention) is trained on known pathogenic variant-phenotype associations, then used to predict potential disease links for VUS.
 
 ### Key Results
 - **Test AUPRC: 0.830** | **Test AUROC: 0.789** | **Silhouette: 0.582**
@@ -16,18 +16,17 @@ MitoGraph integrates three data sources - **RefSeq GFF3** (gene annotations), **
 ## Interactive Dashboard
 
 The results are served through an interactive Next.js dashboard deployed on Vercel.
-
-**Feature Importance (Biological Grounding)** - Extracted linear projection weights from the model's input encoder prove that MitoGraph focuses on biologically relevant features (PhyloP, mutation type) without relying on data leakage.
+**Feature Importance (Biological Grounding):** Extracted linear projection weights from the model's input encoder prove that MitoGraph focuses on biologically relevant features (PhyloP, mutation type) without relying on data leakage.
 
 ![Feature Importance Model Diagnostics](docs/feature_importance.png)
 
-**Network Graph (Structural Interpretability)** - Force-directed layout of the knowledge graph hierarchy: Complexes → Genes → Variants → Phenotypes. Nodes are draggable, clickable, and edge thickness represents GATv2Conv attention weight ($\alpha$).
+**Network Graph (Structural Interpretability):** Force-directed layout of the knowledge graph hierarchy: Complexes → Genes → Variants → Phenotypes. Nodes are draggable, clickable, and edge thickness represents GATv2Conv attention weight ($\alpha$).
 
 ![Interactive network graph with gene labels and complex hierarchy](docs/network_graph.png)
 
-**Stats overview + UMAP latent space** - 2D projection of GATv2Conv variant embeddings colored by pathogenicity class. Flagged VUS (★) cluster with pathogenic variants. Extracted explicitly from the Graph structure's deepest layer.
+**Stats overview + UMAP latent space:** 2D projection of GATv2Conv variant embeddings colored by pathogenicity class. Flagged VUS (★) cluster with pathogenic variants. Extracted explicitly from the Graph structure's deepest layer.
 
-![Dashboard overview showing stat cards and UMAP scatter plot](docs/dashboard_overview.png)
+![Latent Space Explorer showing UMAP scatter plot](docs/latent_space.png)
 
 **Dashboard source code:** [Shreyan-A0I/Mitomap-app](https://github.com/Shreyan-A0I/Mitomap-app)
 
@@ -79,12 +78,3 @@ Each node type has a fixed-length feature vector fed to the GATv2Conv encoder:
 - **PhyloP Conservation**: 100-vertebrate basewise PhyloP scores from UCSC; missing values imputed with median (no 0.0 placeholders)
 - **Variant-Level Split**: Entire variants held out for val/test to prevent edge leakage through k-mer similarity edges
 - **DBSCAN Clustering**: eps=0.4, min_samples=5 on UMAP embeddings to identify pathogenic clusters (Silhouette=0.582)
-
-## Data Sources & Acknowledgements
-
-MitoGraph's neuro-symbolic architecture relies on the expert curation and open-access data provided by the following institutions:
-
-- **MITOMAP**: The definitive human mitochondrial genome database. MITOMAP provided the expertly curated variant-to-phenotype linkages, functional classifications (mmut, rtmut), and the machine-learning-derived APOGEE pathogenicity probabilities.
-- **ClinVar (NCBI)**: A freely accessible, public archive of reports of the relationships among human variations and phenotypes. ClinVar provided the foundational baseline of clinical observations and the primary set of Variants of Uncertain Significance (VUS) for this project's predictive modeling.
-- **rCRS (Revised Cambridge Reference Sequence)**: Sourced via NCBI RefSeq (NC_012920.1), this 16,569 bp sequence served as the physical coordinate system for the knowledge graph and k-mer similarity generation.
-- **PhyloP (UCSC Genome Browser)**: Provided the base-by-base evolutionary conservation scores used as primary structural features for the Graph Attention Network.
